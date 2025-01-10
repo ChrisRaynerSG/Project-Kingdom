@@ -1,15 +1,19 @@
-using Unity.VisualScripting;
+using UnityEngine;
+using System.Collections.Generic;
+
 
 public class World{
     public const int chunkSize = 16;
-    public int seed = 0;
+    public static int Seed {get; set;} = 0;
+
+    public int ViewDistance {get; set;} = 3;
     
     public static World Instance { get; private set; }
 
-       
+    public Dictionary<Vector2Int, Chunk> cachedChunks {get; private set;}
 
     private World(){
-
+        cachedChunks = new Dictionary<Vector2Int, Chunk>();
     }
 
     /// <summary>
@@ -33,5 +37,15 @@ public class World{
         else{
             Instance = new World();
         }
+    }
+
+    public Chunk GetChunkFromCoordinates(Vector2Int position){
+        if(cachedChunks.ContainsKey(position)){
+            return cachedChunks[position];
+        }
+        else{
+            Debug.LogError($"Chunk not found at position: {position.x} {position.y}");
+            return null;
+        } 
     }
 }

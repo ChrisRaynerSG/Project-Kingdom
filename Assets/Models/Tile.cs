@@ -7,8 +7,9 @@ public class Tile{
         Stone
     }
 
-    int posX;
-    int posY;
+    public int GlobalPosX {get; private set;}
+    public int GlobalPosY {get; private set;}
+    
     bool hasTileDetail = false;
     TileDetail tileDetail;
     Chunk chunk;
@@ -26,8 +27,9 @@ public class Tile{
 
     public Tile(TileType type, int posX, int posY, Chunk chunk){
         Type = type;
-        this.posX = posX;
-        this.posY = posY;
+
+        GlobalPosX = posX;
+        GlobalPosY = posY;
         this.chunk = chunk;
     }
 }
