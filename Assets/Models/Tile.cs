@@ -1,3 +1,5 @@
+using System;
+
 public class Tile{
 
     public enum TileType{
@@ -7,11 +9,13 @@ public class Tile{
         Stone
     }
 
+    public event Action<Tile> OnTileTypeChanged;
+
     public int GlobalPosX {get; private set;}
     public int GlobalPosY {get; private set;}
     
-    bool hasTileDetail = false;
-    TileDetail tileDetail;
+    public bool HasTileDetail {get; set;} = false;
+    public TileDetail TileDetailData {get; set;}
     Chunk chunk;
 
 
@@ -31,5 +35,10 @@ public class Tile{
         GlobalPosX = posX;
         GlobalPosY = posY;
         this.chunk = chunk;
+    }
+
+    public void SetTileType(TileType newType){
+        Type = newType;
+        OnTileTypeChanged?.Invoke(this);
     }
 }

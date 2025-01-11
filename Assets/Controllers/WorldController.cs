@@ -6,6 +6,7 @@ public class WorldController : MonoBehaviour{
     public static WorldController Instance { get; private set; }
     [SerializeField] Transform playerTransform;
     [SerializeField] GameObject chunkPrefab;
+    [SerializeField] int seed = 0;
 
     Dictionary<Vector2Int, Chunk> activeChunks = new Dictionary<Vector2Int, Chunk>();
 
@@ -13,10 +14,34 @@ public class WorldController : MonoBehaviour{
 
     public void Awake(){
         world = World.GetInstance();
+        World.Seed = seed;
     }
 
     public void Start(){
         GenerateWorld();
+    }
+
+    public void Update(){
+        Vector2Int playerChunkPosition = GetPlayerChunkPosition();
+        // foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks){
+        //     if(Vector2Int.Distance(playerChunkPosition, chunk.Key) > world.ViewDistance){
+        //         activeChunks.Remove(chunk.Key);
+        //     }
+        // }
+        for(int x = playerChunkPosition.x - world.ViewDistance; x < playerChunkPosition.x + world.ViewDistance; x++){
+            for(int y = playerChunkPosition.y - world.ViewDistance; y < playerChunkPosition.y + world.ViewDistance; y++){
+                Vector2Int chunkPosition = new Vector2Int(x, y);
+                if(activeChunks.ContainsKey(chunkPosition)){
+                    continue;
+                }
+                else if(world.cachedChunks.ContainsKey(chunkPosition)){
+                    activeChunks.Add(chunkPosition, world.cachedChunks[chunkPosition]);
+                }
+                else{
+                    GenerateChunk(chunkPosition, x, y);
+                }
+            }
+        }
     }
 
     // public void Update(){
@@ -46,21 +71,41 @@ public class WorldController : MonoBehaviour{
     // }
 
     private void GenerateWorld(){
-        for(int x = 0; x < 1; x++){
-            for(int y = 0; y < 1; y++){
+        for(int x = -3; x <= 3; x++){
+            for(int y = -3; y <= 3; y++){
                 Vector2Int chunkPosition = new Vector2Int(x, y);
-                Chunk chunk = new Chunk(chunkPosition);
-                world.cachedChunks.Add(chunkPosition, chunk);
-                activeChunks.Add(chunkPosition, chunk);
-                GameObject newChunk = Instantiate(chunkPrefab, new Vector3(chunkPosition.x,chunkPosition.y,0), Quaternion.identity, transform);
-                newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
-                newChunk.GetComponent<ChunkController>().Initialise(chunk);
+                GenerateChunk(chunkPosition, x, y);
             }
         }
     }
 
-    private Chunk GetPlayerChunk(){
-        Vector2Int playerChunkPosition = new Vector2Int(Mathf.FloorToInt(playerTransform.position.x / World.chunkSize), Mathf.FloorToInt(playerTransform.position.z / World.chunkSize));
-        return world.GetChunkFromCoordinates(playerChunkPosition);
+    private Vector2Int GetPlayerChunkPosition(){
+        return new Vector2Int(Mathf.FloorToInt(playerTransform.position.x / World.chunkSize), Mathf.FloorToInt(playerTransform.position.z / World.chunkSize));
     }
+
+    public Tile GetTileFromMousePosition(Vector3 mousePosition){
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2Int chunkPosition = new Vector2Int(Mathf.FloorToInt(worldPosition.x / World.chunkSize), Mathf.FloorToInt(worldPosition.y / World.chunkSize));
+        Vector2Int tilePosition = new Vector2Int(Mathf.FloorToInt(worldPosition.x % World.chunkSize), Mathf.FloorToInt(worldPosition.y % World.chunkSize));
+
+        if(tilePosition.x < 0){
+            tilePosition.x = World.chunkSize + tilePosition.x;
+        }
+        if(tilePosition.y < 0){
+            tilePosition.y = World.chunkSize + tilePosition.y;
+        }
+
+        Chunk chunk = world.GetChunkFromCoordinates(chunkPosition);
+        return chunk.Tiles[tilePosition.x, tilePosition.y];
+
+    }
+
+    private void GenerateChunk(Vector2Int chunkPosition, int x, int y){
+        Chunk chunk = new Chunk(chunkPosition);
+                world.cachedChunks.Add(chunkPosition, chunk);
+                activeChunks.Add(chunkPosition, chunk);
+                GameObject newChunk = Instantiate(chunkPrefab, new Vector3(x,y,0), Quaternion.identity, transform);
+                newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
+                newChunk.GetComponent<ChunkController>().Initialise(chunk);
+    }     
 }
