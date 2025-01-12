@@ -47,5 +47,8 @@ TagManager:
   - name: TileDetail
     uniqueID: 1888394793
     locked: 0
+  - name: PlayerSprite
+    uniqueID: 295685055
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -7,15 +7,19 @@ public class TileController : MonoBehaviour {
     public Tile TileData { get; set; }
 
  public void Initialise(Tile tileData){
+
     TileData = tileData;
     if(TileData.HasTileDetail){
         // Set up tile detail controller
         GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
         newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
-        // SpriteRenderer sr = newTileDetail.GetComponent<SpriteRenderer>();
-        // sr.sortingLayerName = "TileDetail";
-        // tileDetailController.gameObject.SetActive(true);
-        // tileDetailController.Initialise(TileData.tileDetail);
+    }
+    else{ // set up a blank detail game object
+        TileDetail tileDetail = new TileDetail(TileDetail.TileDetailType.None, TileData);
+        TileData.TileDetailData = tileDetail;
+        GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
+        newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
+    
     }
     //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/VeryBasicTils}"); // Change to load tile type later?
     GetComponent<SpriteRenderer>().sprite = tileSprite;
@@ -33,11 +37,7 @@ public class TileController : MonoBehaviour {
             GetComponent<SpriteRenderer>().material.color = Color.gray;
             break;
      }
- }
- public void Start(){
-    if(TileData != null){
-        TileData.OnTileTypeChanged += TileTypeChanged;
-    }
+     TileData.OnTileTypeChanged += TileTypeChanged;
  }
  public void TileTypeChanged(Tile tile){
     switch(tile.Type){
@@ -55,7 +55,6 @@ public class TileController : MonoBehaviour {
             break;
         }
     }
-
 }
 
 

@@ -1,11 +1,13 @@
 using System;
+using System.Diagnostics;
 
 public class TileDetail{
     public enum TileDetailType{
         None,
         Bush,
         Tree,
-        Rock
+        Rock,
+        Wall
     }
 
     TileDetailType type;
