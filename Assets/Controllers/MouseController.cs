@@ -1,10 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
 public class MouseController : MonoBehaviour{
 
+    public static event Action<Tile> onTileHoveredOver;
+
     void Update(){
-        if(Input.GetMouseButtonDown(0)){
+        // if(Input.GetMouseButtonDown(0)){
             Vector3 mousePosition = Input.mousePosition;
             Tile tile = GetTileAtMousePosition(mousePosition);
             if(tile != null){
@@ -14,8 +17,9 @@ public class MouseController : MonoBehaviour{
                 else{
                     Debug.Log($"Tile at mouse position: {tile.Type} {tile.GlobalPosX},{tile.GlobalPosY}");
                 }
+                onTileHoveredOver?.Invoke(tile);
             }
-        }
+        //}
     }
 
 
@@ -36,5 +40,9 @@ public class MouseController : MonoBehaviour{
             return chunk.Tiles[tilePosition.x, tilePosition.y];
         }
         else return null;
+    }
+
+    public static void OnTileHoveredOver(Tile tile){
+        onTileHoveredOver?.Invoke(tile);
     }
 }
