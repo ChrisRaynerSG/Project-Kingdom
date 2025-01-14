@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WoodWallSet_ES
+      name: WoodWallSet_35
       rect:
         serializedVersion: 2
         x: 0
@@ -135,7 +135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_EW
+      name: WoodWallSet_37
       rect:
         serializedVersion: 2
         x: 32
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_SW
+      name: WoodWallSet_57
       rect:
         serializedVersion: 2
         x: 64
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_4
+      name: WoodWallSet_9997
       rect:
         serializedVersion: 2
         x: 192
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NS
+      name: WoodWallSet_15
       rect:
         serializedVersion: 2
         x: 0
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NES
+      name: WoodWallSet_135
       rect:
         serializedVersion: 2
         x: 64
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_W
+      name: WoodWallSet_7
       rect:
         serializedVersion: 2
         x: 96
@@ -289,7 +289,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_E
+      name: WoodWallSet_3
       rect:
         serializedVersion: 2
         x: 160
@@ -311,7 +311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NSW
+      name: WoodWallSet_157
       rect:
         serializedVersion: 2
         x: 192
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NE
+      name: WoodWallSet_13
       rect:
         serializedVersion: 2
         x: 0
@@ -355,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_ESW
+      name: WoodWallSet_357
       rect:
         serializedVersion: 2
         x: 32
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NW
+      name: WoodWallSet_17
       rect:
         serializedVersion: 2
         x: 64
@@ -399,7 +399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_S
+      name: WoodWallSet_5
       rect:
         serializedVersion: 2
         x: 128
@@ -421,7 +421,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_14
+      name: WoodWallSet_9996
       rect:
         serializedVersion: 2
         x: 192
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_N
+      name: WoodWallSet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -465,7 +465,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_16
+      name: WoodWallSet_9999
       rect:
         serializedVersion: 2
         x: 96
@@ -487,7 +487,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_NEW
+      name: WoodWallSet_137
       rect:
         serializedVersion: 2
         x: 128
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WoodWallSet_18
+      name: WoodWallSet_9998
       rect:
         serializedVersion: 2
         x: 160
@@ -545,24 +545,24 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       WoodWallSet_: -623123985
-      WoodWallSet_14: -943188486
-      WoodWallSet_16: 1801968049
-      WoodWallSet_18: 255157056
-      WoodWallSet_4: -115105878
-      WoodWallSet_E: 722511573
-      WoodWallSet_ES: 6329533469732993626
-      WoodWallSet_ESW: -661994514
-      WoodWallSet_EW: -646628063
-      WoodWallSet_N: 1668152151
-      WoodWallSet_NE: -939985550
-      WoodWallSet_NES: -698185639
-      WoodWallSet_NEW: -1031397455
-      WoodWallSet_NS: -981148000
-      WoodWallSet_NSW: 665008238
-      WoodWallSet_NW: -2047847504
-      WoodWallSet_S: 1953216020
-      WoodWallSet_SW: 1193466108
-      WoodWallSet_W: -1648712263
+      WoodWallSet_1: 1668152151
+      WoodWallSet_13: -939985550
+      WoodWallSet_135: -698185639
+      WoodWallSet_137: -1031397455
+      WoodWallSet_15: -981148000
+      WoodWallSet_157: 665008238
+      WoodWallSet_17: -2047847504
+      WoodWallSet_3: 722511573
+      WoodWallSet_35: 6329533469732993626
+      WoodWallSet_357: -661994514
+      WoodWallSet_37: -646628063
+      WoodWallSet_5: 1953216020
+      WoodWallSet_57: 1193466108
+      WoodWallSet_7: -1648712263
+      WoodWallSet_9996: -943188486
+      WoodWallSet_9997: -115105878
+      WoodWallSet_9998: 255157056
+      WoodWallSet_9999: 1801968049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

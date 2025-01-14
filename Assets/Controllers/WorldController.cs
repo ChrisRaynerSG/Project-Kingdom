@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,12 @@ public class WorldController : MonoBehaviour{
     private World world;
 
     public void Awake(){
+        if(Instance == null){
+            Instance = this;
+        }
+        else{
+            Destroy(gameObject);
+        }
         world = World.GetInstance();
         World.Seed = seed;
     }
@@ -98,6 +105,26 @@ public class WorldController : MonoBehaviour{
         Chunk chunk = world.GetChunkFromCoordinates(chunkPosition);
         return chunk.Tiles[tilePosition.x, tilePosition.y];
 
+    }
+
+    public Tile GetTileFromGlobalPosition(Vector2Int globalPosition){
+        
+        
+        Vector2Int chunkPosition = new Vector2Int(globalPosition.x / World.chunkSize, globalPosition.y / World.chunkSize);
+        Vector2Int tilePosition = new Vector2Int(globalPosition.x % World.chunkSize, globalPosition.y % World.chunkSize);
+
+        // fix negative tile and chunk positions
+        if(tilePosition.x < 0){
+            tilePosition.x = World.chunkSize + tilePosition.x;
+            chunkPosition.x -= 1;
+        }
+        if(tilePosition.y < 0){
+            tilePosition.y = World.chunkSize + tilePosition.y;
+            chunkPosition.y -= 1;
+        }
+
+        Chunk chunk = world.GetChunkFromCoordinates(chunkPosition);
+        return chunk.Tiles[tilePosition.x, tilePosition.y];
     }
 
     private void GenerateChunk(Vector2Int chunkPosition, int x, int y){
