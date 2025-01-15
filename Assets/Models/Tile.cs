@@ -16,6 +16,16 @@ public class Tile{
     
     public bool HasTileDetail {get; set;} = false;
     public TileDetail TileDetailData {get; set;}
+
+    public bool IsTraversable{
+        get{
+            if(Type == TileType.Water){
+                return false;
+            }
+            return true;
+        }
+    }
+
     Chunk chunk;
 
 

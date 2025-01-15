@@ -1,97 +1,91 @@
 fileFormatVersion: 2
-guid: f10a0ca910b7d412b927c0f1ea20f8c5
+guid: 281fb6bc920e940fc89ce9fce478d2f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 946253762630201071
-    second: WallTilesAdvanced 1_0
+      213: 6354266119278351808
+    second: WallTilesAdvanced_0
   - first:
-      213: 7398545705636882728
-    second: WallTilesAdvanced 1_1
+      213: 3134103842352151021
+    second: WallTilesAdvanced_1
   - first:
-      213: 8779590189554481458
-    second: WallTilesAdvanced 1_2
+      213: -4058756568240502876
+    second: WallTilesAdvanced_2
   - first:
-      213: 5866981300839284450
-    second: WallTilesAdvanced 1_3
+      213: 1774455529838055006
+    second: WallTilesAdvanced_3
   - first:
-      213: -7583918062115090461
-    second: WallTilesAdvanced 1_4
+      213: -1523159276731521466
+    second: WallTilesAdvanced_4
   - first:
-      213: 8542498236673792736
-    second: WallTilesAdvanced 1_5
+      213: 5860199907963874268
+    second: WallTilesAdvanced_5
   - first:
-      213: 6647726436628056388
-    second: WallTilesAdvanced 1_6
+      213: 3154939503243420808
+    second: WallTilesAdvanced_6
   - first:
-      213: -2195375711746690040
-    second: WallTilesAdvanced 1_7
+      213: 2645079640482575508
+    second: WallTilesAdvanced_7
   - first:
-      213: 8935714582144320205
-    second: WallTilesAdvanced 1_8
+      213: 5709784922698782868
+    second: WallTilesAdvanced_8
   - first:
-      213: -4387976174905397585
-    second: WallTilesAdvanced 1_9
+      213: -6497674815352824986
+    second: WallTilesAdvanced_9
   - first:
-      213: -4131758299910452441
-    second: WallTilesAdvanced 1_10
+      213: 3161379845602516108
+    second: WallTilesAdvanced_10
   - first:
-      213: 2789016071467966495
-    second: WallTilesAdvanced 1_11
+      213: -2082685256416582127
+    second: WallTilesAdvanced_11
   - first:
-      213: -1290823902439768088
-    second: WallTilesAdvanced 1_12
+      213: -7393663153497491985
+    second: WallTilesAdvanced_12
   - first:
-      213: -3406642583223662246
-    second: WallTilesAdvanced 1_13
+      213: 7843771650133068196
+    second: WallTilesAdvanced_13
   - first:
-      213: 7118181703638821864
-    second: WallTilesAdvanced 1_14
+      213: 7424877281281176108
+    second: WallTilesAdvanced_14
   - first:
-      213: 5379255328664951578
-    second: WallTilesAdvanced 1_15
+      213: -8672676181936547341
+    second: WallTilesAdvanced_15
   - first:
-      213: 977353046342132346
-    second: WallTilesAdvanced 1_16
+      213: -5186516377681256178
+    second: WallTilesAdvanced_16
   - first:
-      213: -6107580116580823809
-    second: WallTilesAdvanced 1_17
+      213: 9008822344109305942
+    second: WallTilesAdvanced_17
   - first:
-      213: -4824621179772221583
-    second: WallTilesAdvanced 1_18
+      213: -7470025351374387019
+    second: WallTilesAdvanced_18
   - first:
-      213: 8566412181058609201
-    second: WallTilesAdvanced 1_19
+      213: 5597690676759581674
+    second: WallTilesAdvanced_19
   - first:
-      213: -5128312919625191008
-    second: WallTilesAdvanced 1_20
+      213: -2420162055039566809
+    second: WallTilesAdvanced_20
   - first:
-      213: 2012778770154674182
-    second: WallTilesAdvanced 1_21
+      213: 7600910982655168732
+    second: WallTilesAdvanced_21
   - first:
-      213: 7401331974518146445
-    second: WallTilesAdvanced 1_22
+      213: 4838659989363408128
+    second: WallTilesAdvanced_22
   - first:
-      213: -3296715399756948120
-    second: WallTilesAdvanced 1_23
+      213: 1554428529786638810
+    second: WallTilesAdvanced_23
   - first:
-      213: 4308709062519967736
-    second: WallTilesAdvanced 1_24
+      213: -8048045311560430992
+    second: WallTilesAdvanced_24
   - first:
-      213: -8280668168188333482
-    second: WallTilesAdvanced 1_25
+      213: -6396580251980368244
+    second: WallTilesAdvanced_25
   - first:
-      213: -6389997847760727224
-    second: WallTilesAdvanced 1_26
+      213: 8894720322439267156
+    second: WallTilesAdvanced_26
   - first:
-      213: 5821585727565798988
-    second: WallTilesAdvanced 1_27
-  - first:
-      213: 8964998422356354555
-    second: WallTilesAdvanced 1_28
-  - first:
-      213: -4982749981840334492
-    second: WallTilesAdvanced 1_29
+      213: -8244336072365593858
+    second: WallTilesAdvanced_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -213,10 +207,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f108410634b0b4199b24440d06a63e73
-      internalID: 1588265333
+      spriteID: 0c5d2ef7e53ee2850800000000000000
+      internalID: 6354266119278351808
       vertices: []
       indices: 
       edges: []
@@ -235,10 +229,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 66aa98f0d029a43b18ba4a4539c55f9a
-      internalID: -940777827
+      spriteID: de93694e6d29e7b20800000000000000
+      internalID: 3134103842352151021
       vertices: []
       indices: 
       edges: []
@@ -257,16 +251,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fc1df4e7acf14851b7097d08159b64e
-      internalID: 2078809802
+      spriteID: 4a7cd38c7666ca7c0800000000000000
+      internalID: -4058756568240502876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_3x
+      name: WallTilesAdvanced_5
       rect:
         serializedVersion: 2
         x: 160
@@ -279,10 +273,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 332b065dc2a4e447a93d3abedb5db45e
-      internalID: 1416963484
+      spriteID: e5e89b527e120a810800000000000000
+      internalID: 1774455529838055006
       vertices: []
       indices: 
       edges: []
@@ -301,16 +295,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 42e62a4d2631a42408dd6ea98cab72ce
-      internalID: 1862042990
+      spriteID: 646a31635b6acdae0800000000000000
+      internalID: -1523159276731521466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_5
+      name: WallTilesAdvanced_599999999
       rect:
         serializedVersion: 2
         x: 448
@@ -323,10 +317,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f30c7fbf9650f49e390db7b3d762505f
-      internalID: 1330339952
+      spriteID: cdba6f284cc935150800000000000000
+      internalID: 5860199907963874268
       vertices: []
       indices: 
       edges: []
@@ -345,10 +339,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f789f490919ff4232a7678feab9e6a6b
-      internalID: 1185044218
+      spriteID: 884ebaa33c898cb20800000000000000
+      internalID: 3154939503243420808
       vertices: []
       indices: 
       edges: []
@@ -367,10 +361,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2e3d192695af148c1acf2fd3c6137076
-      internalID: -276007742
+      spriteID: 494f4953be535b420800000000000000
+      internalID: 2645079640482575508
       vertices: []
       indices: 
       edges: []
@@ -389,10 +383,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 352b426924b724462bbbe0264499d38d
-      internalID: -1186261085
+      spriteID: 498975da22b3d3f40800000000000000
+      internalID: 5709784922698782868
       vertices: []
       indices: 
       edges: []
@@ -411,10 +405,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 75935dde6429145018585a34014caa4b
-      internalID: 1087643192
+      spriteID: 66b94ec7e2f93d5a0800000000000000
+      internalID: -6497674815352824986
       vertices: []
       indices: 
       edges: []
@@ -433,10 +427,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2414d1cce6fa84fbf822bf0d328cd725
-      internalID: 1004535948
+      spriteID: c8c9739483a7fdb20800000000000000
+      internalID: 3161379845602516108
       vertices: []
       indices: 
       edges: []
@@ -455,10 +449,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1cf68b87c1b1143e18e18dbb4400fbbf
-      internalID: 1151548200
+      spriteID: 116a8583bc0d813e0800000000000000
+      internalID: -2082685256416582127
       vertices: []
       indices: 
       edges: []
@@ -477,16 +471,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c15ba0502f26a403284778a4510095ac
-      internalID: -1212518495
+      spriteID: fe533e2098e646990800000000000000
+      internalID: -7393663153497491985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_13x
+      name: WallTilesAdvanced_99999
       rect:
         serializedVersion: 2
         x: 0
@@ -499,10 +493,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e78efcac9a4f646cd988680fceac3093
-      internalID: 639257578
+      spriteID: 4a90679f1ccaadc60800000000000000
+      internalID: 7843771650133068196
       vertices: []
       indices: 
       edges: []
@@ -521,10 +515,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4227083bbddad414ca3154f962cf53e3
-      internalID: 1402457733
+      spriteID: c22f1a37c867a0760800000000000000
+      internalID: 7424877281281176108
       vertices: []
       indices: 
       edges: []
@@ -543,10 +537,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d776a301bee4d4555bf0d1437011ad30
-      internalID: 120735924
+      spriteID: 3f95eab56f674a780800000000000000
+      internalID: -8672676181936547341
       vertices: []
       indices: 
       edges: []
@@ -565,10 +559,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1d0008eddae504673a86fc32122a423f
-      internalID: 2010226838
+      spriteID: e01209675dac508b0800000000000000
+      internalID: -5186516377681256178
       vertices: []
       indices: 
       edges: []
@@ -587,10 +581,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8072a0a5f767d4a7f88218479650ecd7
-      internalID: 902912701
+      spriteID: 650bc31f034c50d70800000000000000
+      internalID: 9008822344109305942
       vertices: []
       indices: 
       edges: []
@@ -609,10 +603,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 43cfcbab2350d4030a0efa69fa31b623
-      internalID: -1967465847
+      spriteID: 5b8ca245583255890800000000000000
+      internalID: -7470025351374387019
       vertices: []
       indices: 
       edges: []
@@ -631,16 +625,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ecefd3cd0ac204f42a66bc1aadbf51ae
-      internalID: -988392042
+      spriteID: ae355ce330efead40800000000000000
+      internalID: 5597690676759581674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_20
+      name: WallTilesAdvanced_799999999
       rect:
         serializedVersion: 2
         x: 352
@@ -653,10 +647,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4328ce3bdf0c4492eb908e29ccb3141f
-      internalID: 1361983795
+      spriteID: 72cbc7afe6bd96ed0800000000000000
+      internalID: -2420162055039566809
       vertices: []
       indices: 
       edges: []
@@ -675,10 +669,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 690e514838c8c4090913bc3c2d8d75c1
-      internalID: -428923129
+      spriteID: cd0d682744cdb7960800000000000000
+      internalID: 7600910982655168732
       vertices: []
       indices: 
       edges: []
@@ -697,16 +691,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 76e58dccc9682490b89c8fc1aa439e4f
-      internalID: 1131299482
+      spriteID: 00db6eebf9f562340800000000000000
+      internalID: 4838659989363408128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_23
+      name: WallTilesAdvanced_239999
       rect:
         serializedVersion: 2
         x: 544
@@ -719,10 +713,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: be7c92aac07f9499e8b29a5dbccef730
-      internalID: 1411803966
+      spriteID: ad15aaa1380729510800000000000000
+      internalID: 1554428529786638810
       vertices: []
       indices: 
       edges: []
@@ -741,16 +735,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0ca06a26d8ac844d0b020d55cf770715
-      internalID: -1768606855
+      spriteID: 07a4134fd699f4090800000000000000
+      internalID: -8048045311560430992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_25
+      name: WallTilesAdvanced_34
       rect:
         serializedVersion: 2
         x: 736
@@ -763,10 +757,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7e4724cf1d8144db087d9e506cdf2274
-      internalID: -646675652
+      spriteID: c867e6fb628ca37a0800000000000000
+      internalID: -6396580251980368244
       vertices: []
       indices: 
       edges: []
@@ -785,10 +779,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0109fd16142d447e5ad3ed596d51a470
-      internalID: -214710066
+      spriteID: 453c07bc105607b70800000000000000
+      internalID: 8894720322439267156
       vertices: []
       indices: 
       edges: []
@@ -807,10 +801,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9203a6d91dee346248d5245a6ea2ba3b
-      internalID: -306034218
+      spriteID: efaa5b5c50c369d80800000000000000
+      internalID: -8244336072365593858
       vertices: []
       indices: 
       edges: []
@@ -831,8 +825,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae8f71f02d7db4c5699769c0df302623
-      internalID: -954737325
+      spriteID: bf930213376b24aabb2885aeae024e9d
+      internalID: -2126559663
       vertices: []
       indices: 
       edges: []
@@ -853,8 +847,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b26a90f4b6ed0471799c7249355e40e6
-      internalID: -443690796
+      spriteID: 98d8787e0a52948d9b0c1fc21e8bae33
+      internalID: -12109527
       vertices: []
       indices: 
       edges: []
@@ -875,8 +869,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 449a845acec6e40ab9e9851a03f51368
-      internalID: -1686513033
+      spriteID: 04c330d2988774664b733ef73962eaaf
+      internalID: -692292578
       vertices: []
       indices: 
       edges: []
@@ -897,8 +891,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab17d3bf785f34492bedd7004607f132
-      internalID: -1000910717
+      spriteID: b3d6130da9b9b409dbd91a9b0441ec64
+      internalID: 1029133484
       vertices: []
       indices: 
       edges: []
@@ -919,8 +913,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf7f9582f1c824a488f58aa4706c6120
-      internalID: 1871248692
+      spriteID: fd2b4b24a3eed4d899fbade732c3f03b
+      internalID: -1655654017
       vertices: []
       indices: 
       edges: []
@@ -941,8 +935,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e830d0098e641969a5d22191c290b2
-      internalID: -407877662
+      spriteID: feda6bcaee06b4dae805a1ab73b91c80
+      internalID: -425562356
       vertices: []
       indices: 
       edges: []
@@ -963,14 +957,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc127ae986b854581a26ee870341d08e
-      internalID: -1947836020
+      spriteID: 4488827f73f9849549937ede68a68d2f
+      internalID: 1336356049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_35x
+      name: WallTilesAdvanced_359999
       rect:
         serializedVersion: 2
         x: 320
@@ -985,8 +979,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31a52d358dd424300a08acfafbb84b2b
-      internalID: 320579800
+      spriteID: 8c65a3803e49a470d831228c62d3705a
+      internalID: -246167940
       vertices: []
       indices: 
       edges: []
@@ -1007,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 863430788fd654d7bb6e56abb999c10d
-      internalID: 69748436
+      spriteID: 585af666f3140422e8a62a8e39b5a259
+      internalID: -494754469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_37x
+      name: WallTilesAdvanced_379999999
       rect:
         serializedVersion: 2
         x: 608
@@ -1029,8 +1023,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0be8e8125c64b6a91a2c1aee998ff9
-      internalID: -532795301
+      spriteID: dd7d14bf90a494380b56c329d6e408b2
+      internalID: 103439149
       vertices: []
       indices: 
       edges: []
@@ -1051,8 +1045,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c6d26f3ddadc4b91b134547679a0d06
-      internalID: 1087998518
+      spriteID: 78a94202c3d994c3e81b4d0b450cdf82
+      internalID: 68154981
       vertices: []
       indices: 
       edges: []
@@ -1073,14 +1067,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb88ad87d32e1469d8ab58823ab6c60c
-      internalID: 886326931
+      spriteID: 9b1b00bce3a8e4849a443586df739402
+      internalID: -1944289213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_40
+      name: WallTilesAdvanced_123
       rect:
         serializedVersion: 2
         x: 736
@@ -1095,14 +1089,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0912e4b85a1014bf2bb87fc82a7928cd
-      internalID: -358425275
+      spriteID: 156c9e8465e98474f9a9757a5554d5d6
+      internalID: 1054956613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_41
+      name: WallTilesAdvanced_01237
       rect:
         serializedVersion: 2
         x: 768
@@ -1117,8 +1111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b60e6347f90fb4a618e8928b48a4d196
-      internalID: -376155783
+      spriteID: f1a67e2741aa2407e85fa1acdd9b1cb2
+      internalID: 1152685836
       vertices: []
       indices: 
       edges: []
@@ -1139,8 +1133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65a3893ded814495a9559f6c6c3223d3
-      internalID: -490170476
+      spriteID: 458ac4f7a35854eb2b858c6ab5ad4a8e
+      internalID: 162485407
       vertices: []
       indices: 
       edges: []
@@ -1161,8 +1155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c86b98676e7f4d179855085ce72d943
-      internalID: -1536621837
+      spriteID: eab117bffeec340aea7ef1e3655999ea
+      internalID: 1560460953
       vertices: []
       indices: 
       edges: []
@@ -1183,8 +1177,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2aefc43773f241daa5efecd76e5a6b8
-      internalID: -194880186
+      spriteID: 961ed6de69b19490a8ce815c39e0e51f
+      internalID: -641365350
       vertices: []
       indices: 
       edges: []
@@ -1205,14 +1199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d653f8a5a24624ddabd830b0ecc90bc0
-      internalID: 584694167
+      spriteID: a6ee8ce3ee08945b59cde042838aff36
+      internalID: -733489331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_345
+      name: WallTilesAdvanced_3459
       rect:
         serializedVersion: 2
         x: 0
@@ -1227,14 +1221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c20e04a4f544695b290a5a750833a3
-      internalID: -159238286
+      spriteID: 7c4d9fdf657864a0f893aea5934485e5
+      internalID: -1682254057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_47
+      name: WallTilesAdvanced_3456799
       rect:
         serializedVersion: 2
         x: 32
@@ -1249,14 +1243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b1b2fe8ff73e4985980a3009dbe1bde
-      internalID: 1484316766
+      spriteID: c45dbb133b8bb4f788e5d7c7536ca189
+      internalID: -2027478246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_567
+      name: WallTilesAdvanced_48
       rect:
         serializedVersion: 2
         x: 64
@@ -1271,8 +1265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d7970aa1f54b4e20a333ba9e2c9b23a
-      internalID: 1098521287
+      spriteID: 665f866d120e942d9a427b7713435a3b
+      internalID: -1693661997
       vertices: []
       indices: 
       edges: []
@@ -1293,8 +1287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73d9033f2cccb4d6b8250d0084de7784
-      internalID: -374081362
+      spriteID: 23df3dbdae8704beeb3f6dcd68a09b03
+      internalID: -1585435584
       vertices: []
       indices: 
       edges: []
@@ -1315,8 +1309,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6418b4b1a5732472da3aafc0e9f2478f
-      internalID: -2046479285
+      spriteID: 3b8b4cb9c3bb54ecf931c800a86e2334
+      internalID: 1514705530
       vertices: []
       indices: 
       edges: []
@@ -1337,8 +1331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ca4a3d757294d95bda880544c0a8e7
-      internalID: -225560816
+      spriteID: 66a78aef15614482bb0a8f32f329e34d
+      internalID: -843601001
       vertices: []
       indices: 
       edges: []
@@ -1359,8 +1353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c29e8585a800149ab85961d36560e5ee
-      internalID: 1546411239
+      spriteID: 16e7455c0a6b746848ed2326ebccc221
+      internalID: 1231821495
       vertices: []
       indices: 
       edges: []
@@ -1381,8 +1375,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 408eba55d37934ad89dc7aee42ef6436
-      internalID: 1172341293
+      spriteID: a4f0e8b96f8234eaab1b1a6eae307bea
+      internalID: -191543956
       vertices: []
       indices: 
       edges: []
@@ -1403,8 +1397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5923bce6b76164b5eb273ac83fe9664a
-      internalID: 1993703647
+      spriteID: 6d4674a0ea0a04bf8ac266449772a89a
+      internalID: -314186175
       vertices: []
       indices: 
       edges: []
@@ -1425,8 +1419,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5486bf92fa7e46e7904ade1c338fa68
-      internalID: -824003285
+      spriteID: 39539c8ed54404168b25b926cb171c5f
+      internalID: -1345300242
       vertices: []
       indices: 
       edges: []
@@ -1447,14 +1441,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f599d95de19f4fc489cbf3a138d5ce6
-      internalID: 321558413
+      spriteID: edf2fd90bbc3e48a99182ef922f7eae4
+      internalID: 1176689890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_57x
+      name: WallTilesAdvanced_5799999
       rect:
         serializedVersion: 2
         x: 704
@@ -1469,8 +1463,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19a8cd6f3f9de422b92471d35dcdcba4
-      internalID: -1378800324
+      spriteID: 4d353a9b20ab04b80947498c3f5c26be
+      internalID: 331804917
       vertices: []
       indices: 
       edges: []
@@ -1491,8 +1485,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f336b2a375b41468880f9f136ad110a8
-      internalID: 516964042
+      spriteID: e0095cdc4f6ee4036a6fc69685933986
+      internalID: 381320340
       vertices: []
       indices: 
       edges: []
@@ -1513,14 +1507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d08328a1a1d564857b7ddf3afd8020c7
-      internalID: -982392833
+      spriteID: dc1065e91e57e4397adb248a0d799ba7
+      internalID: 527387859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_60
+      name: WallTilesAdvanced_67
       rect:
         serializedVersion: 2
         x: 832
@@ -1535,8 +1529,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fadcf29693c540cb843c5976a7b6049
-      internalID: 467171530
+      spriteID: d6368dcc6f56a4b328f397387abf7adb
+      internalID: -815200486
       vertices: []
       indices: 
       edges: []
@@ -1557,8 +1551,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5480d46954df4c238231cb2308aea77
-      internalID: 930196947
+      spriteID: 28be77cd1fe8247dca94ec030052a2b8
+      internalID: 1296575719
       vertices: []
       indices: 
       edges: []
@@ -1579,8 +1573,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43e819f08089b42cba1c00072c37f6c1
-      internalID: -1857178775
+      spriteID: dbf81930f1d494dcd80760bc1590701d
+      internalID: 1416890678
       vertices: []
       indices: 
       edges: []
@@ -1601,8 +1595,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 486992560f7c74e69af179a7e1d8995a
-      internalID: 908202663
+      spriteID: 8e55012eabca14d80a9b894fe97e9f11
+      internalID: 1599908604
       vertices: []
       indices: 
       edges: []
@@ -1623,8 +1617,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da8462696eb343b6890987de8daab94
-      internalID: 1839716814
+      spriteID: 7973a7b097a2a4eed8754f42461b98a6
+      internalID: -1735314785
       vertices: []
       indices: 
       edges: []
@@ -1645,8 +1639,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d147186ecea54d02a318bc35ddeea73
-      internalID: -155755489
+      spriteID: 4b4ff682195ed41028660dbe2d45f2bf
+      internalID: 524039109
       vertices: []
       indices: 
       edges: []
@@ -1667,8 +1661,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d498b67e7ae2a481f900ccfce8bed88c
-      internalID: 365348315
+      spriteID: 0051ab5187e3f428184fa0f18c6f44c1
+      internalID: 1888859277
       vertices: []
       indices: 
       edges: []
@@ -1689,8 +1683,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d7ec99d43d024efea2775a92b9f0188
-      internalID: 1775559629
+      spriteID: 1bc06c332607140168af940c5d54111b
+      internalID: -922335548
       vertices: []
       indices: 
       edges: []
@@ -1711,8 +1705,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45096ce94530344ce91b3eb8a8767a80
-      internalID: -2125116548
+      spriteID: 774ff4e518ccc48f0a209dac6141b6b2
+      internalID: 1936701868
       vertices: []
       indices: 
       edges: []
@@ -1733,8 +1727,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e37929b7aa744468ed4acfbe7b094d
-      internalID: 1083436175
+      spriteID: 9b1bbe920072441319bb8d698776a894
+      internalID: 1844392840
       vertices: []
       indices: 
       edges: []
@@ -1755,8 +1749,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49f2cf1f3d46a4d3e8ba920b3d104207
-      internalID: 1590751346
+      spriteID: 57ee84700d3de4827a7c7597719aea92
+      internalID: -1046141803
       vertices: []
       indices: 
       edges: []
@@ -1777,8 +1771,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 247ca99445d124aa7bd066ba318ef4d3
-      internalID: -1982532194
+      spriteID: 259128bae0e3e4515b27651fbbbef870
+      internalID: -309879082
       vertices: []
       indices: 
       edges: []
@@ -1799,8 +1793,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13bea4f13f09248f895d95258d4c2f0d
-      internalID: 1509950862
+      spriteID: 45e022913047f4b0f9f04235350f8245
+      internalID: 1679572455
       vertices: []
       indices: 
       edges: []
@@ -1821,8 +1815,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51e79c80c81c74b74bbb2e4160a3b068
-      internalID: 1189443951
+      spriteID: a2edf595c1e7e4cc0b56654dd57e1c0d
+      internalID: -1165185085
       vertices: []
       indices: 
       edges: []
@@ -1843,8 +1837,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec9237a1cbd704d2197baae3e23e4f73
-      internalID: 1049595673
+      spriteID: dab80a6ce07bf43fba572c1123780056
+      internalID: -834444094
       vertices: []
       indices: 
       edges: []
@@ -1865,8 +1859,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09fd4ded44bbc467185f5115148debf8
-      internalID: 479748864
+      spriteID: e05e7fc2e9f91461eb2124a962fef2a4
+      internalID: 213583896
       vertices: []
       indices: 
       edges: []
@@ -1887,8 +1881,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43a23ee4632647c6aae68d9e71012bc
-      internalID: 1939338247
+      spriteID: 18027a274a3e647a492fd6682eb6a009
+      internalID: -1370953489
       vertices: []
       indices: 
       edges: []
@@ -1909,8 +1903,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3335e1107fac43b499710cea561b41e
-      internalID: 1196761324
+      spriteID: acde52cd5cd46457eb94c1cfd4286645
+      internalID: 1938792044
       vertices: []
       indices: 
       edges: []
@@ -1931,8 +1925,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99ea5124406d7404689583f30f558ef3
-      internalID: -800889409
+      spriteID: 15038c86f1f71428a9008164dd4305cb
+      internalID: 731456477
       vertices: []
       indices: 
       edges: []
@@ -1953,8 +1947,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f789f59a6b5724417bb4fcd8a57a8a4d
-      internalID: -35426716
+      spriteID: a7757fceff41845b5837d9afb601bb6b
+      internalID: -1746204393
       vertices: []
       indices: 
       edges: []
@@ -1975,8 +1969,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c5a55f244e3747edaeb5cc3a757c4fd
-      internalID: -59315777
+      spriteID: 62743c353955b41ce8cc5e9341448008
+      internalID: 269741055
       vertices: []
       indices: 
       edges: []
@@ -1997,8 +1991,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb46daf1f157419bbc88f87a4e5bf89
-      internalID: -1909557442
+      spriteID: 663629b1f5ac44e3286d82ce74fc6040
+      internalID: 422187892
       vertices: []
       indices: 
       edges: []
@@ -2019,8 +2013,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9ec08733ce2d42ef9a85245598a7d1a
-      internalID: 1062874643
+      spriteID: 51df3a412fd0d462689d63a755b8a0d7
+      internalID: -1214456104
       vertices: []
       indices: 
       edges: []
@@ -2041,8 +2035,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f3669c944be4060951e066ed64b1a1
-      internalID: 1136358551
+      spriteID: 86fd9a259901f450d8de5a2c4a4f6396
+      internalID: -1687657228
       vertices: []
       indices: 
       edges: []
@@ -2063,14 +2057,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 583918a7fe9b54626838e85e9c5beb91
-      internalID: 218053593
+      spriteID: 41d7ca1ed5a604e72801a9de27e4ff1b
+      internalID: -1347409111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_123
+      name: WallTilesAdvanced_85
       rect:
         serializedVersion: 2
         x: 0
@@ -2085,8 +2079,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3664cd4e54c24450db5a09e95af60ced
-      internalID: 886360606
+      spriteID: 6976ef1164ad74e81a5707de6a5d9c52
+      internalID: -1648587357
       vertices: []
       indices: 
       edges: []
@@ -2107,8 +2101,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bd7485fcfa504d8a8f092c7ad8071df
-      internalID: -786654335
+      spriteID: 82af3aad196ab4cd4a2f563514a6ef22
+      internalID: -1008718932
       vertices: []
       indices: 
       edges: []
@@ -2129,14 +2123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1659c6b9e5a6641619d34f1db26a1685
-      internalID: -761907483
+      spriteID: a295a964d0a22454c93fcd6e4e719c8c
+      internalID: -1411770345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_017
+      name: WallTilesAdvanced_88
       rect:
         serializedVersion: 2
         x: 192
@@ -2151,8 +2145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c011dfeb7c404f5a811e2d479860d65
-      internalID: -546571469
+      spriteID: b9cc28efb11144981abccfe76531bcc4
+      internalID: 1185418247
       vertices: []
       indices: 
       edges: []
@@ -2173,8 +2167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 620180c6bb6b4446980877d8d52fc3ae
-      internalID: -407586523
+      spriteID: d427e8fa96a99456cab4fbaacf594ec0
+      internalID: -201106624
       vertices: []
       indices: 
       edges: []
@@ -2195,8 +2189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ccda8da27cb4714b309dee81359627
-      internalID: 1525638363
+      spriteID: 8a4c34abbd30041679052936f9947586
+      internalID: -860119745
       vertices: []
       indices: 
       edges: []
@@ -2217,8 +2211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5660f80ff1f84416a92fd7bcd1a7850
-      internalID: 1793018043
+      spriteID: e698da7a6d2024135b73075a1bf9b6a7
+      internalID: 517469504
       vertices: []
       indices: 
       edges: []
@@ -2239,8 +2233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9355c05332d7c48369a0380df64c3496
-      internalID: 1622823767
+      spriteID: e01c5b9b1670b4619991f36ad6aa4af9
+      internalID: 456075303
       vertices: []
       indices: 
       edges: []
@@ -2261,8 +2255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61553f24fa3d3401b85bf7d268e51140
-      internalID: -152762632
+      spriteID: 166660d6f0544457581d22f1794cb5b0
+      internalID: -1881411228
       vertices: []
       indices: 
       edges: []
@@ -2283,8 +2277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138d6acf145fb42c2843f9772a50521d
-      internalID: -1007361260
+      spriteID: 4b5bcfababeb1405fb02107566c84ecd
+      internalID: 724490627
       vertices: []
       indices: 
       edges: []
@@ -2305,8 +2299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d59cd240f2fad4c33bc5c04bedc88a6b
-      internalID: -730855273
+      spriteID: 4da145f203570408daf4beacf67f660b
+      internalID: 909678298
       vertices: []
       indices: 
       edges: []
@@ -2327,8 +2321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91daad735d2f340dab3ff897e1000e09
-      internalID: 1941937788
+      spriteID: 7f98179342e6445f19dcc0234fcad349
+      internalID: -1104758978
       vertices: []
       indices: 
       edges: []
@@ -2349,8 +2343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb50dc7ce27cc422ea9b41c415800a3b
-      internalID: 2052730069
+      spriteID: c90f3a638d5314232aaa073d4a4524d3
+      internalID: -1791771670
       vertices: []
       indices: 
       edges: []
@@ -2371,8 +2365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e00b136999c194f8fb6117c75c133454
-      internalID: 1879202921
+      spriteID: d22e2252227e94f7d94a025c28ee45e0
+      internalID: 1055283656
       vertices: []
       indices: 
       edges: []
@@ -2393,8 +2387,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a950048c80ff47038245fda72b93db5
-      internalID: 709198415
+      spriteID: bdc9354ab23fd4968a8008aa55b91353
+      internalID: -1285160119
       vertices: []
       indices: 
       edges: []
@@ -2415,8 +2409,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8ab434d5f3dd4fce8cd191592339c70
-      internalID: -1805460632
+      spriteID: b71874d8ceb074b3c84c69b20c7b6537
+      internalID: 1271118015
       vertices: []
       indices: 
       edges: []
@@ -2437,8 +2431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f2c7fa40e549460da8a134a7ef0508e
-      internalID: 1496503101
+      spriteID: 79602765fe8af47da81a36d3097be382
+      internalID: -147079434
       vertices: []
       indices: 
       edges: []
@@ -2459,8 +2453,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d4be4b8774a24091bfb21273186e38c
-      internalID: 1074139684
+      spriteID: 71479948eeccc43caa1c425b864065d7
+      internalID: -654816185
       vertices: []
       indices: 
       edges: []
@@ -2481,8 +2475,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab85864828e7410da4f6fd4dfb42e0c
-      internalID: -567388568
+      spriteID: 0377f27053a634bc6861209cc56dd62f
+      internalID: -706711801
       vertices: []
       indices: 
       edges: []
@@ -2503,14 +2497,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d026ed264e954ee3a20acd4ca6e6502
-      internalID: -2059609568
+      spriteID: 151546e2dc7e7402e8703a69e3252f16
+      internalID: -980759240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_105
+      name: WallTilesAdvanced_07
       rect:
         serializedVersion: 2
         x: 960
@@ -2525,8 +2519,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c04b4895eae154c1d8b95b900bc0b8ba
-      internalID: -536376213
+      spriteID: ea153a7e55d664264ba90c0e2c312c4b
+      internalID: 53591093
       vertices: []
       indices: 
       edges: []
@@ -2547,8 +2541,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 864ebaeaa86264feb94f534dfd9ee998
-      internalID: 294495762
+      spriteID: 9914a2bd221654f5b9d0c61fa470483e
+      internalID: 1429032938
       vertices: []
       indices: 
       edges: []
@@ -2569,8 +2563,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d981e2e14380a4e22b2162dbc960c68d
-      internalID: 1507461379
+      spriteID: 6f260f7ddb68b4359b3df0b1cab676b7
+      internalID: -2029233174
       vertices: []
       indices: 
       edges: []
@@ -2591,8 +2585,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecafc107ff1604d7cbe311a87a86ed52
-      internalID: -358031086
+      spriteID: e7dc40011c077485580376dd1e36fe72
+      internalID: 224406151
       vertices: []
       indices: 
       edges: []
@@ -2613,8 +2607,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0c4affdea974bab9872e8297d0b6d5
-      internalID: -1400474581
+      spriteID: beaf58358538749708e4b605a296ae4f
+      internalID: -698559515
       vertices: []
       indices: 
       edges: []
@@ -2635,8 +2629,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd91b3439318c4b5290cf4ced15577da
-      internalID: -1518136403
+      spriteID: 0e8caab9f68814a078a1923c5452e9eb
+      internalID: 404758193
       vertices: []
       indices: 
       edges: []
@@ -2657,8 +2651,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 836cb459986eb421f95d6c6e0931aebd
-      internalID: 1778110090
+      spriteID: 3b8fc041b6a6541acae26f5b5312a94a
+      internalID: -2095712555
       vertices: []
       indices: 
       edges: []
@@ -2679,8 +2673,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cff80761015c24e0ab05cc4f36ea9236
-      internalID: 1885256701
+      spriteID: 2c0b49dd7b8394ec9825f78482616223
+      internalID: -720650328
       vertices: []
       indices: 
       edges: []
@@ -2701,8 +2695,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3816eb6db69574388aa0dbd80e86963f
-      internalID: -139455740
+      spriteID: 438641108acf24c7792b01ddec2628c0
+      internalID: -294520895
       vertices: []
       indices: 
       edges: []
@@ -2723,8 +2717,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93b7a4054ec804f6b9e3aaac9412181e
-      internalID: -1104507689
+      spriteID: 6bda5b64c958840968288e7f579fd0ce
+      internalID: -614519815
       vertices: []
       indices: 
       edges: []
@@ -2745,14 +2739,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add4becef6fc34030b48fe7a082e030a
-      internalID: 1449012565
+      spriteID: 7803928ef82734924aea8ccc74e16ef0
+      internalID: -508604505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_116
+      name: WallTilesAdvanced_23
       rect:
         serializedVersion: 2
         x: 768
@@ -2767,8 +2761,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4f2ed0f2c8d9430ba48ca13db434a80
-      internalID: 851639463
+      spriteID: 509d66655952541c89a50a8bab8dd7b4
+      internalID: -2116163946
       vertices: []
       indices: 
       edges: []
@@ -2789,8 +2783,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2baf73bf85ffe4f4aafe85a2f7521b23
-      internalID: -1139019521
+      spriteID: f8fccaea0f2554a0eb63cd9b6aa494f2
+      internalID: -1697356877
       vertices: []
       indices: 
       edges: []
@@ -2811,14 +2805,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2122073fe9dd94df0a096f201434a149
-      internalID: 468564789
+      spriteID: 8118b04c0f57a4d9e8fd1d07cf901dee
+      internalID: 378748562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_119
+      name: WallTilesAdvanced_34599
       rect:
         serializedVersion: 2
         x: 928
@@ -2833,14 +2827,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86eba980c14fe40d2ae38da9cc42393d
-      internalID: 842136418
+      spriteID: e7d90d29ee7e944e99a61e515948ede8
+      internalID: 1283984040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_120
+      name: WallTilesAdvanced_56799
       rect:
         serializedVersion: 2
         x: 960
@@ -2855,8 +2849,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dd7b37f4de4b479babfa54bf3e23406
-      internalID: 611488897
+      spriteID: a1565015c903e4776b48ecbf1b18be99
+      internalID: -253032335
       vertices: []
       indices: 
       edges: []
@@ -2877,8 +2871,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36aa48f1cc82346f3b0af82b6760684c
-      internalID: -888220742
+      spriteID: 56c876ff203aa4e78ad702a515f49433
+      internalID: -816097934
       vertices: []
       indices: 
       edges: []
@@ -2899,14 +2893,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e9ff4d4ae0584621b728f201331c5d5
-      internalID: 1877930406
+      spriteID: ed3728425a3d94d32b5a4fcc34a6376e
+      internalID: 1760520178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_123x
+      name: WallTilesAdvanced_12399999
       rect:
         serializedVersion: 2
         x: 64
@@ -2921,8 +2915,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada1350548313464bb50314fd74f061d
-      internalID: -1993702628
+      spriteID: 612d601fdbed543c38f5a6a37ef383ea
+      internalID: 1331130771
       vertices: []
       indices: 
       edges: []
@@ -2943,8 +2937,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0715972cf12a04062bddb4af443b5706
-      internalID: 403797337
+      spriteID: 4a369703640d2447caebcaf444a2266c
+      internalID: 600685770
       vertices: []
       indices: 
       edges: []
@@ -2965,8 +2959,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7afbcc3f737924602a1c8ade2ba6cbf3
-      internalID: -1821622700
+      spriteID: 12e5ab42492b343f695358aaf563716b
+      internalID: -1611785208
       vertices: []
       indices: 
       edges: []
@@ -2987,8 +2981,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3764199d6f2404443b9ffa7ba3735618
-      internalID: 644163516
+      spriteID: 99e8116c423e6409cb177a9db0bbf1ac
+      internalID: -45808618
       vertices: []
       indices: 
       edges: []
@@ -3009,8 +3003,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5131571eede684e8d910ddbe91af800e
-      internalID: 928435871
+      spriteID: 0c7eb805e34724a97850f76b004b5ff8
+      internalID: -542509459
       vertices: []
       indices: 
       edges: []
@@ -3031,8 +3025,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d5c1e7a59fb144e7a9664b08f66ee7e
-      internalID: 1724696368
+      spriteID: 35d53a65d4d7842fa83c711795e9bba5
+      internalID: -1770658687
       vertices: []
       indices: 
       edges: []
@@ -3053,8 +3047,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3015213bf056f44f48f5dd16e98690eb
-      internalID: 1563256066
+      spriteID: 8f9fb626562bc4be39c5f775d1633639
+      internalID: 1362258527
       vertices: []
       indices: 
       edges: []
@@ -3075,8 +3069,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43fa3681b0c4d4d479b201f47fe224b6
-      internalID: 1019519379
+      spriteID: d3a906e6ab62148bca834b4ba53ee0a3
+      internalID: 329911093
       vertices: []
       indices: 
       edges: []
@@ -3097,8 +3091,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a87efc63288d4995b133f25293ca954
-      internalID: -1150732866
+      spriteID: 0d0c4f2238a114927885b8ecf396451c
+      internalID: 2024928271
       vertices: []
       indices: 
       edges: []
@@ -3119,8 +3113,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf412094870a4723bfba0602899c7c1
-      internalID: 2064628467
+      spriteID: e436bd8c473f74bafb2bdb0ea151c2af
+      internalID: 1231073659
       vertices: []
       indices: 
       edges: []
@@ -3141,8 +3135,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a06958bb96fe4d1999b62a0904e1949
-      internalID: -523984072
+      spriteID: f6c4bcd82f703404b9e34f0645f5adc0
+      internalID: 2047110042
       vertices: []
       indices: 
       edges: []
@@ -3163,14 +3157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9abdfa3b9fd14103b839de7ce9f7cc8
-      internalID: 383805870
+      spriteID: 1e2a7258bb5a64065a1845a7c5390531
+      internalID: -1103696541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_135x
+      name: WallTilesAdvanced_135999999
       rect:
         serializedVersion: 2
         x: 576
@@ -3185,8 +3179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3eef322b3c145b29045293d349c7fe
-      internalID: 540308273
+      spriteID: 14c6ce3a94ab94292a3fce9d5b552984
+      internalID: -1254867285
       vertices: []
       indices: 
       edges: []
@@ -3207,8 +3201,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd74bd8abc18e4917aff72f4396a45d3
-      internalID: -1365381888
+      spriteID: c53bb6640e1034a7dbd9f4a473372515
+      internalID: -403953318
       vertices: []
       indices: 
       edges: []
@@ -3229,8 +3223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7356be9bcc5564e9a9bc759982f6115c
-      internalID: 1886358885
+      spriteID: 299865ee573c34d6ba2b23138221b2d3
+      internalID: -1473349264
       vertices: []
       indices: 
       edges: []
@@ -3251,14 +3245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceb13c87ab604cbeb812975140659b4
-      internalID: 635359640
+      spriteID: 928a75aaba66f4718a3a75e919dd89b9
+      internalID: 519008167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_139
+      name: WallTilesAdvanced_0123456
       rect:
         serializedVersion: 2
         x: 800
@@ -3273,8 +3267,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18c6653f3717421696d1d9a123ac9f0
-      internalID: -1884535886
+      spriteID: d21a5dbd2d6b84564900e59bbdbc9d1b
+      internalID: -76208492
       vertices: []
       indices: 
       edges: []
@@ -3295,14 +3289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c84c4ead655e4f7e9f255907d3e49ac
-      internalID: -1131580679
+      spriteID: c5333c229649d4547bdaa78cd0f6f5de
+      internalID: 555095475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_141
+      name: WallTilesAdvanced_123456
       rect:
         serializedVersion: 2
         x: 928
@@ -3317,14 +3311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66122436c0cb2420b99141d447aca644
-      internalID: 1628334937
+      spriteID: 7a940257aab204dd2a362d21ef5aefba
+      internalID: 1993328205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_142
+      name: WallTilesAdvanced_015679
       rect:
         serializedVersion: 2
         x: 960
@@ -3339,8 +3333,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a95e3485cfe9f4cf8870b8520ea22b15
-      internalID: 126858662
+      spriteID: 37aae8bdc69ca47b28a831f9e164c429
+      internalID: 248186951
       vertices: []
       indices: 
       edges: []
@@ -3361,8 +3355,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdcd2b23ec28849cc9344f9c43ba75cb
-      internalID: -381134438
+      spriteID: 31681b07870d140f5aad184dd71f346b
+      internalID: -847531565
       vertices: []
       indices: 
       edges: []
@@ -3383,8 +3377,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e9a2bb197f584b729214dfed8d2feb8
-      internalID: -1508421188
+      spriteID: 5fff4af4d1b80458ea0e8b9dbd5208a8
+      internalID: 104837361
       vertices: []
       indices: 
       edges: []
@@ -3405,8 +3399,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d59886ad4bcc4f9598e357855f23be2
-      internalID: 1763450644
+      spriteID: cd29d1218dc7c4ecabba351f17f26801
+      internalID: -667536073
       vertices: []
       indices: 
       edges: []
@@ -3427,8 +3421,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65b918cbbf5b94de29d6f3f85312488e
-      internalID: -1553248670
+      spriteID: cfde4f5e33a5e47b6b9492fc85becbb4
+      internalID: 95824345
       vertices: []
       indices: 
       edges: []
@@ -3449,8 +3443,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27471f53a22ce4e3c8f13ec44e332386
-      internalID: -1440290792
+      spriteID: 5ad757fb829c64a3583898419af9df8c
+      internalID: 1461283545
       vertices: []
       indices: 
       edges: []
@@ -3471,8 +3465,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19023fef44ff849ceaff3b4f99ff0f6d
-      internalID: -391216906
+      spriteID: de6a8660a22ba46e3a0c009c0ffffd37
+      internalID: 192713188
       vertices: []
       indices: 
       edges: []
@@ -3493,8 +3487,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8d02d0f1c9f46de87ce5f11beb588f
-      internalID: -1817370423
+      spriteID: 9c9e1ecb3577145e199b7bb8bc6a168c
+      internalID: 1862145400
       vertices: []
       indices: 
       edges: []
@@ -3515,8 +3509,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6bba531c1de7430da368523a2e0e547
-      internalID: 516111640
+      spriteID: e91bcdad97b394cad881bd4820c2c380
+      internalID: -205677468
       vertices: []
       indices: 
       edges: []
@@ -3537,8 +3531,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b00267530c654b6ab67c4e99b0d33d5
-      internalID: -1043818935
+      spriteID: 5e6cf182c9b0946d8a84884cfe4e9cbb
+      internalID: -466304622
       vertices: []
       indices: 
       edges: []
@@ -3559,8 +3553,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44c630311d7b14aca8f307f855c52a72
-      internalID: 1810362
+      spriteID: 655632af2a42f47b7a691bfe9b5faaa8
+      internalID: -364603818
       vertices: []
       indices: 
       edges: []
@@ -3581,8 +3575,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a202eb5c8f3994fa8a76a07f2d789c8c
-      internalID: 2113951904
+      spriteID: 77ec7b64d70a145519892b02b100b8bd
+      internalID: 814096824
       vertices: []
       indices: 
       edges: []
@@ -3603,14 +3597,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa639d44c56d342e593a086ba46a6440
-      internalID: 669706148
+      spriteID: e7c1333d3611146709355f861df6e68d
+      internalID: 635997260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_155
+      name: WallTilesAdvanced_2
       rect:
         serializedVersion: 2
         x: 896
@@ -3625,8 +3619,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08dffa42ea7f849539016b7085ed6840
-      internalID: 641047257
+      spriteID: 2601e9d111bb64f98bcf1026fe2e4024
+      internalID: 1814725508
       vertices: []
       indices: 
       edges: []
@@ -3647,14 +3641,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed401404bc3e24746bac03235c3bcba4
-      internalID: -583284522
+      spriteID: c169303fe5106427c8432256fd4601c2
+      internalID: 185184913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_157x
+      name: WallTilesAdvanced_01999
       rect:
         serializedVersion: 2
         x: 960
@@ -3669,14 +3663,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c5180e372f8044c99ca5558602730fb
-      internalID: 188959184
+      spriteID: afafe0a6a6f2243f28bf564522519117
+      internalID: 799394064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_158
+      name: WallTilesAdvanced_3456
       rect:
         serializedVersion: 2
         x: 32
@@ -3691,14 +3685,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6adbd801cf77742139ecc1b136e492c7
-      internalID: -573919930
+      spriteID: 995ada01347604c5589db4f5efcb85d9
+      internalID: 461203761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_159
+      name: WallTilesAdvanced_9998
       rect:
         serializedVersion: 2
         x: 64
@@ -3713,14 +3707,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6548952c90dc849f1b218b6aaea26128
-      internalID: -51181192
+      spriteID: 1848eeb1fd44242eca879877f27e2615
+      internalID: 1641696609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_160
+      name: WallTilesAdvanced_9999999
       rect:
         serializedVersion: 2
         x: 128
@@ -3735,8 +3729,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 564e3989954ef418eb6883d1374d0fba
-      internalID: 1288552605
+      spriteID: 72c81521b948e478b85d7eeeaec71f6a
+      internalID: 1875176069
       vertices: []
       indices: 
       edges: []
@@ -3757,14 +3751,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2581cc554ad59445fb50bdf309abe388
-      internalID: -1611372059
+      spriteID: 89841482b73414e158a52865883c16b5
+      internalID: 1357525490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_162
+      name: WallTilesAdvanced_567
       rect:
         serializedVersion: 2
         x: 192
@@ -3779,14 +3773,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae655cd1079144b690094aded0e3dcd
-      internalID: 1993305373
+      spriteID: 45cac1c5a945b4718a3dc8d209705b04
+      internalID: -2004336250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_163
+      name: WallTilesAdvanced_345
       rect:
         serializedVersion: 2
         x: 256
@@ -3801,14 +3795,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5f972ebf200d444b8a0be7d471b52a3
-      internalID: -1479918050
+      spriteID: 7d761fcea289342bb9602d42d481f439
+      internalID: 1457100563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_164
+      name: WallTilesAdvanced_4567
       rect:
         serializedVersion: 2
         x: 288
@@ -3823,146 +3817,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db9e46cc150234af1b5a00100f5abb3b
-      internalID: -505094347
+      spriteID: 7ef985793318340b799b8e036665bf56
+      internalID: -1300213227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_165
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 676dd9ffcf0cd47b7ab419b4e6e68343
-      internalID: -1184190601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_3456
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62219650c82644233a32bad69b4127ac
-      internalID: 2110311612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_167
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aeddcf1a96a345db98adeec84546fef
-      internalID: 157222300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_168
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a1ee4341d8004e56a11325847517b88
-      internalID: 825288129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_169
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c55c218dfd7a14e768cd5fc03666f16e
-      internalID: -1104440194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_170
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 608
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4690ea13fabed4941a791ee76be8ad22
-      internalID: 1798345328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_171
+      name: WallTilesAdvanced_234
       rect:
         serializedVersion: 2
         x: 0
@@ -3977,8 +3839,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 851ac66357dd74fd3a83cb3fb726604d
-      internalID: 1230768249
+      spriteID: 1923f9e8b945f4b2dabbe3fa7ed937b1
+      internalID: -2116790624
       vertices: []
       indices: 
       edges: []
@@ -3999,8 +3861,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9139378f640844da68950bdb364bd77b
-      internalID: 1248151246
+      spriteID: 8f611748728d44e0f9c77725391545f4
+      internalID: -2069095121
       vertices: []
       indices: 
       edges: []
@@ -4021,14 +3883,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319893cccdf41412992896b2f5f5a3a3
-      internalID: 931661153
+      spriteID: 487f0162a9bda44ab8431b03809017e7
+      internalID: 238667953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_174
+      name: WallTilesAdvanced_1234
       rect:
         serializedVersion: 2
         x: 128
@@ -4043,8 +3905,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4347497a01ac14c60b295459ed59afc3
-      internalID: 1089838426
+      spriteID: 2f289e065ed91467d83d946840c6ee33
+      internalID: 1272341778
       vertices: []
       indices: 
       edges: []
@@ -4065,14 +3927,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413dd902bdc134728bccbb6f1850d503
-      internalID: -2035083922
+      spriteID: 80523c49e603b4e959546dfdccdbccc5
+      internalID: -1771203757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_176
+      name: WallTilesAdvanced_0167
       rect:
         serializedVersion: 2
         x: 192
@@ -4087,8 +3949,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb899d1235494c51a3d527ad75ee288
-      internalID: -995298588
+      spriteID: 715b19da6e2194b58bed409d21abd179
+      internalID: -309274353
       vertices: []
       indices: 
       edges: []
@@ -4109,8 +3971,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 984d64bd961504ddfbaed85a40d4c6f8
-      internalID: 887063603
+      spriteID: 40511d2b40094493389e8f08188c5565
+      internalID: 682630230
       vertices: []
       indices: 
       edges: []
@@ -4119,7 +3981,7 @@ TextureImporter:
       name: WallTilesAdvanced_013567
       rect:
         serializedVersion: 2
-        x: 288
+        x: 287
         y: 576
         width: 32
         height: 32
@@ -4131,14 +3993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ff4713750373403397cfe8c14be974a
-      internalID: 1563690365
+      spriteID: 39de43ed239de4326b45f0445c4b1025
+      internalID: 1349461902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_179
+      name: WallTilesAdvanced_067
       rect:
         serializedVersion: 2
         x: 320
@@ -4153,146 +4015,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9605d4c959a241318766888f19aca79
-      internalID: -1225292107
+      spriteID: 5fc36ba478ded43c78bf62b9e2c6556e
+      internalID: 1486990987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_1235
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 375a4399fcd9d4437acf202ee498cd63
-      internalID: 1186586717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_01237
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f434a83b5d30c44df9ba9dfd86220fda
-      internalID: -1435710171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_182
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d6ad5626037a485487603773c197c16
-      internalID: 2050074592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_183
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ce05941104344611a3e7e3bf76ad6ea
-      internalID: 694837436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_184
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5260c213f38ea4821a03e50079e750b0
-      internalID: 72297772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_0157
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 576
-        width: 32
-        height: 32
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 344774908dd34496ab0ff4e4b76e3de0
-      internalID: 500668046
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WallTilesAdvanced_186
+      name: WallTilesAdvanced_0123
       rect:
         serializedVersion: 2
         x: 32
@@ -4307,14 +4037,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51524cb09a573466c9ba697784673466
-      internalID: -1146376132
+      spriteID: e4ca932e414c640acb8a1753e07858a4
+      internalID: -518806016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_187
+      name: WallTilesAdvanced_017
       rect:
         serializedVersion: 2
         x: 64
@@ -4329,14 +4059,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52eb55de22fd64b1f9825fb41c7eb3cb
-      internalID: 777575129
+      spriteID: ef76dead91f604f7097d781f61038a57
+      internalID: -1523197679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_188
+      name: WallTilesAdvanced_012
       rect:
         serializedVersion: 2
         x: 160
@@ -4351,14 +4081,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8331af869cba94e9281f682a2d9e55b7
-      internalID: 1750587137
+      spriteID: adef150f7f47f4343927f4c15e10760f
+      internalID: -1305051921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_189
+      name: WallTilesAdvanced_1123
       rect:
         serializedVersion: 2
         x: 256
@@ -4373,14 +4103,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3db1fe246cbd43738238ae825eb97fd
-      internalID: -1741807657
+      spriteID: a11bafb36a90b44a6b1a53281cfe5d36
+      internalID: -1068982421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_190
+      name: WallTilesAdvanced_0127
       rect:
         serializedVersion: 2
         x: 288
@@ -4395,21 +4125,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94fa677acd59743b8b5c272912bec818
-      internalID: -75453016
+      spriteID: 26ae3e10cf88c4bcea3dbf2004cde2fb
+      internalID: -366006240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_191
+      name: WallTilesAdvanced_999999
       rect:
         serializedVersion: 2
-        x: 384
-        y: 544
-        width: 32
-        height: 32
-      alignment: 6
+        x: 220
+        y: 917
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2386d9ea3154780a80400131959bf1
+      internalID: 999024671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTilesAdvanced_0
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 605
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef72c85988324b4ca6574d33b78de5c
+      internalID: -138274292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTilesAdvanced_14
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 825
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c719c6fb47b3a4d9abb76465d3aa43e6
+      internalID: 1849581767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallTilesAdvanced_16
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 765
+        width: 39
+        height: 2
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -4417,21 +4213,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e9fe3950d25f452b97f34012c4e8670
-      internalID: -1690460208
+      spriteID: 028c0c880a5a642eb91bbd9196469f01
+      internalID: 1022537014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WallTilesAdvanced_192
+      name: WallTilesAdvanced_18
       rect:
         serializedVersion: 2
-        x: 576
-        y: 544
-        width: 32
-        height: 32
-      alignment: 6
+        x: 612
+        y: 908
+        width: 10
+        height: 5
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -4439,8 +4235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8a8db7a40d9547f18cfa565c3db6782
-      internalID: -164592589
+      spriteID: 82152632503a6430b94aabaa00db14b3
+      internalID: -2051194614
       vertices: []
       indices: 
       edges: []
@@ -4449,7 +4245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fbba0eceb46e94509abfe593a7322128
+    spriteID: 5affcf081d0864fdb92e379eefe2c8e2
     internalID: 0
     vertices: []
     indices: 
@@ -4459,199 +4255,190 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WallTilesAdvanced_: -1967465847
-      WallTilesAdvanced_01234567: 1590751346
-      WallTilesAdvanced_0123457: 1775559629
-      WallTilesAdvanced_0123567: 1839716814
-      WallTilesAdvanced_012357: -2035083922
-      WallTilesAdvanced_01237: -1435710171
-      WallTilesAdvanced_0134567: -443690796
-      WallTilesAdvanced_013457: 1877930406
-      WallTilesAdvanced_013567: 1563690365
-      WallTilesAdvanced_01357: 383805870
-      WallTilesAdvanced_0137: -2059609568
-      WallTilesAdvanced_01567: 931661153
-      WallTilesAdvanced_0157: 500668046
-      WallTilesAdvanced_017: -546571469
-      WallTilesAdvanced_1: -1947836020
-      WallTilesAdvanced_10: 1004535948
-      WallTilesAdvanced_100: -1805460632
-      WallTilesAdvanced_101: 1496503101
-      WallTilesAdvanced_102: 1074139684
-      WallTilesAdvanced_103: -567388568
-      WallTilesAdvanced_105: -536376213
-      WallTilesAdvanced_106: 294495762
-      WallTilesAdvanced_107: 1507461379
-      WallTilesAdvanced_108: -358031086
-      WallTilesAdvanced_109: -1400474581
-      WallTilesAdvanced_11: 1151548200
-      WallTilesAdvanced_110: -1518136403
-      WallTilesAdvanced_111: 1778110090
-      WallTilesAdvanced_112: 1885256701
-      WallTilesAdvanced_113: -139455740
-      WallTilesAdvanced_114: -1104507689
-      WallTilesAdvanced_115: 1449012565
-      WallTilesAdvanced_116: 851639463
-      WallTilesAdvanced_118: 468564789
-      WallTilesAdvanced_119: 842136418
-      WallTilesAdvanced_12: -1212518495
-      WallTilesAdvanced_120: 611488897
-      WallTilesAdvanced_121: -888220742
-      WallTilesAdvanced_123: 886360606
-      WallTilesAdvanced_12345: 887063603
-      WallTilesAdvanced_1234567: -214710066
-      WallTilesAdvanced_123457: 1248151246
-      WallTilesAdvanced_1235: 1186586717
-      WallTilesAdvanced_123567: -1821622700
-      WallTilesAdvanced_12357: 1886358885
-      WallTilesAdvanced_1237: -583284522
-      WallTilesAdvanced_123x: -1993702628
-      WallTilesAdvanced_124: 403797337
-      WallTilesAdvanced_126: 644163516
-      WallTilesAdvanced_127: 928435871
-      WallTilesAdvanced_129: 1563256066
-      WallTilesAdvanced_13: -1000910717
-      WallTilesAdvanced_130: 1019519379
-      WallTilesAdvanced_132: 2064628467
-      WallTilesAdvanced_133: -523984072
-      WallTilesAdvanced_1345: 479748864
-      WallTilesAdvanced_134567: 1189443951
-      WallTilesAdvanced_13457: 1724696368
-      WallTilesAdvanced_135: -988392042
-      WallTilesAdvanced_13567: -1150732866
-      WallTilesAdvanced_1357: 2010226838
-      WallTilesAdvanced_135x: 540308273
-      WallTilesAdvanced_136: -1365381888
-      WallTilesAdvanced_137: 1087998518
-      WallTilesAdvanced_138: 635359640
-      WallTilesAdvanced_139: -1884535886
-      WallTilesAdvanced_13x: 639257578
-      WallTilesAdvanced_140: -1131580679
-      WallTilesAdvanced_141: 1628334937
-      WallTilesAdvanced_142: 126858662
-      WallTilesAdvanced_143: -381134438
-      WallTilesAdvanced_144: -1508421188
-      WallTilesAdvanced_145: 1763450644
-      WallTilesAdvanced_146: -1553248670
-      WallTilesAdvanced_147: -1440290792
-      WallTilesAdvanced_148: -391216906
-      WallTilesAdvanced_149: -1817370423
-      WallTilesAdvanced_15: 1402457733
-      WallTilesAdvanced_150: 516111640
-      WallTilesAdvanced_151: -1043818935
-      WallTilesAdvanced_152: 1810362
-      WallTilesAdvanced_153: 2113951904
-      WallTilesAdvanced_154: 669706148
-      WallTilesAdvanced_155: 641047257
-      WallTilesAdvanced_1567: -59315777
-      WallTilesAdvanced_157: 1131299482
-      WallTilesAdvanced_157x: 188959184
-      WallTilesAdvanced_158: -573919930
-      WallTilesAdvanced_159: -51181192
-      WallTilesAdvanced_160: 1288552605
-      WallTilesAdvanced_162: 1993305373
-      WallTilesAdvanced_163: -1479918050
-      WallTilesAdvanced_164: -505094347
-      WallTilesAdvanced_165: -1184190601
-      WallTilesAdvanced_167: 157222300
-      WallTilesAdvanced_168: 825288129
-      WallTilesAdvanced_169: -1104440194
-      WallTilesAdvanced_17: -407877662
-      WallTilesAdvanced_170: 1798345328
-      WallTilesAdvanced_171: 1230768249
-      WallTilesAdvanced_174: 1089838426
-      WallTilesAdvanced_176: -995298588
-      WallTilesAdvanced_179: -1225292107
-      WallTilesAdvanced_182: 2050074592
-      WallTilesAdvanced_183: 694837436
-      WallTilesAdvanced_184: 72297772
-      WallTilesAdvanced_186: -1146376132
-      WallTilesAdvanced_187: 777575129
-      WallTilesAdvanced_188: 1750587137
-      WallTilesAdvanced_189: -1741807657
-      WallTilesAdvanced_190: -75453016
-      WallTilesAdvanced_191: -1690460208
-      WallTilesAdvanced_192: -164592589
-      WallTilesAdvanced_20: 1361983795
-      WallTilesAdvanced_21: -428923129
-      WallTilesAdvanced_23: 1411803966
-      WallTilesAdvanced_24: -1768606855
-      WallTilesAdvanced_25: -646675652
-      WallTilesAdvanced_27: -306034218
-      WallTilesAdvanced_28: -954737325
-      WallTilesAdvanced_3: 120735924
-      WallTilesAdvanced_30: -1686513033
-      WallTilesAdvanced_32: 1871248692
-      WallTilesAdvanced_345: -159238286
-      WallTilesAdvanced_3456: 2110311612
-      WallTilesAdvanced_34567: -1611372059
-      WallTilesAdvanced_3457: -1139019521
-      WallTilesAdvanced_35: 1588265333
-      WallTilesAdvanced_3567: -982392833
-      WallTilesAdvanced_357: -276007742
-      WallTilesAdvanced_35x: 320579800
-      WallTilesAdvanced_36: 69748436
-      WallTilesAdvanced_37: -940777827
-      WallTilesAdvanced_37x: -532795301
-      WallTilesAdvanced_39: 886326931
-      WallTilesAdvanced_3x: 1416963484
-      WallTilesAdvanced_4: 1862042990
-      WallTilesAdvanced_40: -358425275
-      WallTilesAdvanced_41: -376155783
-      WallTilesAdvanced_42: -490170476
-      WallTilesAdvanced_43: -1536621837
-      WallTilesAdvanced_44: -194880186
-      WallTilesAdvanced_45: 584694167
-      WallTilesAdvanced_47: 1484316766
-      WallTilesAdvanced_49: -374081362
-      WallTilesAdvanced_5: 1330339952
-      WallTilesAdvanced_50: -2046479285
-      WallTilesAdvanced_51: -225560816
-      WallTilesAdvanced_52: 1546411239
-      WallTilesAdvanced_53: 1172341293
-      WallTilesAdvanced_54: 1993703647
-      WallTilesAdvanced_55: -824003285
-      WallTilesAdvanced_56: 321558413
-      WallTilesAdvanced_567: 1098521287
-      WallTilesAdvanced_57: 2078809802
-      WallTilesAdvanced_57x: -1378800324
-      WallTilesAdvanced_58: 516964042
-      WallTilesAdvanced_6: 1185044218
-      WallTilesAdvanced_60: 467171530
-      WallTilesAdvanced_61: 930196947
-      WallTilesAdvanced_62: -1857178775
-      WallTilesAdvanced_63: 908202663
-      WallTilesAdvanced_65: -155755489
-      WallTilesAdvanced_66: 365348315
-      WallTilesAdvanced_68: -2125116548
-      WallTilesAdvanced_69: 1083436175
-      WallTilesAdvanced_7: 902912701
-      WallTilesAdvanced_71: -1982532194
-      WallTilesAdvanced_72: 1509950862
-      WallTilesAdvanced_74: 1049595673
-      WallTilesAdvanced_76: 1939338247
-      WallTilesAdvanced_77: 1196761324
-      WallTilesAdvanced_78: -800889409
-      WallTilesAdvanced_79: -35426716
-      WallTilesAdvanced_8: -1186261085
-      WallTilesAdvanced_81: -1909557442
-      WallTilesAdvanced_82: 1062874643
-      WallTilesAdvanced_83: 1136358551
-      WallTilesAdvanced_84: 218053593
-      WallTilesAdvanced_86: -786654335
-      WallTilesAdvanced_87: -761907483
-      WallTilesAdvanced_89: -407586523
-      WallTilesAdvanced_9: 1087643192
-      WallTilesAdvanced_90: 1525638363
-      WallTilesAdvanced_91: 1793018043
-      WallTilesAdvanced_92: 1622823767
-      WallTilesAdvanced_93: -152762632
-      WallTilesAdvanced_94: -1007361260
-      WallTilesAdvanced_95: -730855273
-      WallTilesAdvanced_96: 1941937788
-      WallTilesAdvanced_97: 2052730069
-      WallTilesAdvanced_98: 1879202921
-      WallTilesAdvanced_99: 709198415
+      WallTilesAdvanced_: -7470025351374387019
+      WallTilesAdvanced_0: -138274292
+      WallTilesAdvanced_012: -1305051921
+      WallTilesAdvanced_0123: -518806016
+      WallTilesAdvanced_0123456: -76208492
+      WallTilesAdvanced_01234567: -1046141803
+      WallTilesAdvanced_0123457: -922335548
+      WallTilesAdvanced_0123567: -1735314785
+      WallTilesAdvanced_012357: -1771203757
+      WallTilesAdvanced_01237: 1152685836
+      WallTilesAdvanced_0127: -366006240
+      WallTilesAdvanced_0134567: -12109527
+      WallTilesAdvanced_013457: 1760520178
+      WallTilesAdvanced_013567: 1349461902
+      WallTilesAdvanced_01357: -1103696541
+      WallTilesAdvanced_0137: -980759240
+      WallTilesAdvanced_01567: 238667953
+      WallTilesAdvanced_015679: 248186951
+      WallTilesAdvanced_0167: -309274353
+      WallTilesAdvanced_017: -1523197679
+      WallTilesAdvanced_01999: 799394064
+      WallTilesAdvanced_067: 1486990987
+      WallTilesAdvanced_07: 53591093
+      WallTilesAdvanced_1: 1336356049
+      WallTilesAdvanced_10: 3161379845602516108
+      WallTilesAdvanced_100: 1271118015
+      WallTilesAdvanced_101: -147079434
+      WallTilesAdvanced_102: -654816185
+      WallTilesAdvanced_103: -706711801
+      WallTilesAdvanced_106: 1429032938
+      WallTilesAdvanced_107: -2029233174
+      WallTilesAdvanced_108: 224406151
+      WallTilesAdvanced_109: -698559515
+      WallTilesAdvanced_11: -2082685256416582127
+      WallTilesAdvanced_110: 404758193
+      WallTilesAdvanced_111: -2095712555
+      WallTilesAdvanced_112: -720650328
+      WallTilesAdvanced_1123: -1068982421
+      WallTilesAdvanced_113: -294520895
+      WallTilesAdvanced_114: -614519815
+      WallTilesAdvanced_115: -508604505
+      WallTilesAdvanced_118: 378748562
+      WallTilesAdvanced_12: -7393663153497491985
+      WallTilesAdvanced_121: -816097934
+      WallTilesAdvanced_123: 1054956613
+      WallTilesAdvanced_1234: 1272341778
+      WallTilesAdvanced_12345: 682630230
+      WallTilesAdvanced_123456: 1993328205
+      WallTilesAdvanced_1234567: 8894720322439267156
+      WallTilesAdvanced_123457: -2069095121
+      WallTilesAdvanced_123567: -1611785208
+      WallTilesAdvanced_12357: -1473349264
+      WallTilesAdvanced_1237: 185184913
+      WallTilesAdvanced_12399999: 1331130771
+      WallTilesAdvanced_124: 600685770
+      WallTilesAdvanced_126: -45808618
+      WallTilesAdvanced_127: -542509459
+      WallTilesAdvanced_129: 1362258527
+      WallTilesAdvanced_13: 1029133484
+      WallTilesAdvanced_130: 329911093
+      WallTilesAdvanced_132: 1231073659
+      WallTilesAdvanced_133: 2047110042
+      WallTilesAdvanced_1345: 213583896
+      WallTilesAdvanced_134567: -1165185085
+      WallTilesAdvanced_13457: -1770658687
+      WallTilesAdvanced_135: 5597690676759581674
+      WallTilesAdvanced_13567: 2024928271
+      WallTilesAdvanced_1357: -5186516377681256178
+      WallTilesAdvanced_135999999: -1254867285
+      WallTilesAdvanced_136: -403953318
+      WallTilesAdvanced_137: 68154981
+      WallTilesAdvanced_138: 519008167
+      WallTilesAdvanced_14: 1849581767
+      WallTilesAdvanced_140: 555095475
+      WallTilesAdvanced_143: -847531565
+      WallTilesAdvanced_144: 104837361
+      WallTilesAdvanced_145: -667536073
+      WallTilesAdvanced_146: 95824345
+      WallTilesAdvanced_147: 1461283545
+      WallTilesAdvanced_148: 192713188
+      WallTilesAdvanced_149: 1862145400
+      WallTilesAdvanced_15: 7424877281281176108
+      WallTilesAdvanced_150: -205677468
+      WallTilesAdvanced_151: -466304622
+      WallTilesAdvanced_152: -364603818
+      WallTilesAdvanced_153: 814096824
+      WallTilesAdvanced_154: 635997260
+      WallTilesAdvanced_1567: 269741055
+      WallTilesAdvanced_157: 4838659989363408128
+      WallTilesAdvanced_16: 1022537014
+      WallTilesAdvanced_17: -425562356
+      WallTilesAdvanced_18: -2051194614
+      WallTilesAdvanced_2: 1814725508
+      WallTilesAdvanced_21: 7600910982655168732
+      WallTilesAdvanced_23: -2116163946
+      WallTilesAdvanced_234: -2116790624
+      WallTilesAdvanced_239999: 1554428529786638810
+      WallTilesAdvanced_24: -8048045311560430992
+      WallTilesAdvanced_27: -8244336072365593858
+      WallTilesAdvanced_28: -2126559663
+      WallTilesAdvanced_3: -8672676181936547341
+      WallTilesAdvanced_30: -692292578
+      WallTilesAdvanced_32: -1655654017
+      WallTilesAdvanced_34: -6396580251980368244
+      WallTilesAdvanced_345: 1457100563
+      WallTilesAdvanced_3456: 461203761
+      WallTilesAdvanced_34567: 1357525490
+      WallTilesAdvanced_3456799: -2027478246
+      WallTilesAdvanced_3457: -1697356877
+      WallTilesAdvanced_3459: -1682254057
+      WallTilesAdvanced_34599: 1283984040
+      WallTilesAdvanced_35: 6354266119278351808
+      WallTilesAdvanced_3567: 527387859
+      WallTilesAdvanced_357: 2645079640482575508
+      WallTilesAdvanced_359999: -246167940
+      WallTilesAdvanced_36: -494754469
+      WallTilesAdvanced_37: 3134103842352151021
+      WallTilesAdvanced_379999999: 103439149
+      WallTilesAdvanced_39: -1944289213
+      WallTilesAdvanced_4: -1523159276731521466
+      WallTilesAdvanced_42: 162485407
+      WallTilesAdvanced_43: 1560460953
+      WallTilesAdvanced_44: -641365350
+      WallTilesAdvanced_45: -733489331
+      WallTilesAdvanced_4567: -1300213227
+      WallTilesAdvanced_48: -1693661997
+      WallTilesAdvanced_49: -1585435584
+      WallTilesAdvanced_5: 1774455529838055006
+      WallTilesAdvanced_50: 1514705530
+      WallTilesAdvanced_51: -843601001
+      WallTilesAdvanced_52: 1231821495
+      WallTilesAdvanced_53: -191543956
+      WallTilesAdvanced_54: -314186175
+      WallTilesAdvanced_55: -1345300242
+      WallTilesAdvanced_56: 1176689890
+      WallTilesAdvanced_567: -2004336250
+      WallTilesAdvanced_56799: -253032335
+      WallTilesAdvanced_57: -4058756568240502876
+      WallTilesAdvanced_5799999: 331804917
+      WallTilesAdvanced_58: 381320340
+      WallTilesAdvanced_599999999: 5860199907963874268
+      WallTilesAdvanced_6: 3154939503243420808
+      WallTilesAdvanced_61: 1296575719
+      WallTilesAdvanced_62: 1416890678
+      WallTilesAdvanced_63: 1599908604
+      WallTilesAdvanced_65: 524039109
+      WallTilesAdvanced_66: 1888859277
+      WallTilesAdvanced_67: -815200486
+      WallTilesAdvanced_68: 1936701868
+      WallTilesAdvanced_69: 1844392840
+      WallTilesAdvanced_7: 9008822344109305942
+      WallTilesAdvanced_71: -309879082
+      WallTilesAdvanced_72: 1679572455
+      WallTilesAdvanced_74: -834444094
+      WallTilesAdvanced_76: -1370953489
+      WallTilesAdvanced_77: 1938792044
+      WallTilesAdvanced_78: 731456477
+      WallTilesAdvanced_79: -1746204393
+      WallTilesAdvanced_799999999: -2420162055039566809
+      WallTilesAdvanced_8: 5709784922698782868
+      WallTilesAdvanced_81: 422187892
+      WallTilesAdvanced_82: -1214456104
+      WallTilesAdvanced_83: -1687657228
+      WallTilesAdvanced_84: -1347409111
+      WallTilesAdvanced_85: -1648587357
+      WallTilesAdvanced_86: -1008718932
+      WallTilesAdvanced_87: -1411770345
+      WallTilesAdvanced_88: 1185418247
+      WallTilesAdvanced_89: -201106624
+      WallTilesAdvanced_9: -6497674815352824986
+      WallTilesAdvanced_90: -860119745
+      WallTilesAdvanced_91: 517469504
+      WallTilesAdvanced_92: 456075303
+      WallTilesAdvanced_93: -1881411228
+      WallTilesAdvanced_94: 724490627
+      WallTilesAdvanced_95: 909678298
+      WallTilesAdvanced_96: -1104758978
+      WallTilesAdvanced_97: -1791771670
+      WallTilesAdvanced_98: 1055283656
+      WallTilesAdvanced_99: -1285160119
+      WallTilesAdvanced_9998: 1641696609
+      WallTilesAdvanced_99999: 7843771650133068196
+      WallTilesAdvanced_999999: 999024671
+      WallTilesAdvanced_9999999: 1875176069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

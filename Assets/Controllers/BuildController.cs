@@ -34,43 +34,11 @@ public class BuildController : MonoBehaviour {
                 //return; // don't build on top of existing tile details
                 }
                 else{
-                    if(isBuildingWall){
+                    if(isBuildingWall)
+                    {
                         tile.HasTileDetail = true;
                         tile.TileDetailData.Type = TileDetail.TileDetailType.Wall;
-                        for(int i = 0; i < 8; i++){
-                            int x = 0;
-                            int y = 0;
-                            switch(i){
-                                case 0:
-                                    x = -1;y = 1;break;
-                                case 1:
-                                    x = 0;y = 1;break;
-                                case 2:
-                                    x = 1;y = 1;break;
-                                case 3:
-                                    x = 1;y = 0;break;
-                                case 4:
-                                    x = 1;y = -1;break;
-                                case 5:
-                                    x = 0;y = -1;break;
-                                case 6:
-                                    x = -1;y = -1;break;
-                                case 7:
-                                    x = -1;y = 0;break;
-                                default:
-                                    x = 0;y = 0;break;
-                            }
-
-                            Tile adjacentTile = WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int(tile.GlobalPosX + x, tile.GlobalPosY + y));
-                            if(adjacentTile != null){
-                                if(adjacentTile.HasTileDetail){
-                                    if(adjacentTile.TileDetailData.Type == TileDetail.TileDetailType.Wall){
-                                        adjacentTile.TileDetailData.Type = TileDetail.TileDetailType.None; // to update adjacent walls? will this work?
-                                        adjacentTile.TileDetailData.Type = TileDetail.TileDetailType.Wall; // to update adjacent walls? will this work?
-                                    }
-                                }
-                            }
-                        }
+                        UpdateAdjacentTiles(tile);
                     }
                 }
             }
@@ -80,12 +48,60 @@ public class BuildController : MonoBehaviour {
                 if(tile.HasTileDetail){
                     tile.HasTileDetail = false;
                     tile.TileDetailData.Type = TileDetail.TileDetailType.None;
+                    UpdateAdjacentTiles(tile);
+                }
+            }
+        }
+    }
+
+    private static void UpdateAdjacentTiles(Tile tile)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            int x = 0;
+            int y = 0;
+            switch (i)
+            {
+                case 0:
+                    x = -1; y = 1; break;
+                case 1:
+                    x = 0; y = 1; break;
+                case 2:
+                    x = 1; y = 1; break;
+                case 3:
+                    x = 1; y = 0; break;
+                case 4:
+                    x = 1; y = -1; break;
+                case 5:
+                    x = 0; y = -1; break;
+                case 6:
+                    x = -1; y = -1; break;
+                case 7:
+                    x = -1; y = 0; break;
+                default:
+                    x = 0; y = 0; break;
+            }
+
+            Tile adjacentTile = WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int(tile.GlobalPosX + x, tile.GlobalPosY + y));
+            if (adjacentTile != null)
+            {
+                if (adjacentTile.HasTileDetail)
+                {
+                    if (adjacentTile.TileDetailData.Type == TileDetail.TileDetailType.Wall)
+                    {
+                        adjacentTile.TileDetailData.Type = TileDetail.TileDetailType.Wall;
+                    }
+                    if (adjacentTile.TileDetailData.Type == TileDetail.TileDetailType.Rock)
+                    {
+                        adjacentTile.TileDetailData.Type = TileDetail.TileDetailType.Rock;
+                    }
                 }
             }
         }
     }
 
     private void OnEnable(){
+        // add all different types of buildings here?
         // MouseController.onTileClicked += BuildWall;
         buildWallButton.onClick.AddListener(() => {isBuildingWall = true; isBulldozing = false;});
         bulldozeButton.onClick.AddListener(() => {isBulldozing = true; isBuildingWall = false;});

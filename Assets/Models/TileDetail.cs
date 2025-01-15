@@ -35,7 +35,7 @@ public class TileDetail{
     }
 
     public Tile TileData { get; private set;}
-    public bool IsTraversable {get; private set;} = true;
+    public bool IsTraversable {get; set;} = true;
     
     public event Action<TileDetail> OnTileDetailTypeChanged;
     public event Action<TileDetail> OnTileDetailHitPointsChanged;

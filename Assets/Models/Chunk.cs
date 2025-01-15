@@ -32,6 +32,7 @@ public class Chunk{
         this.position = position;
         Tiles = new Tile[World.chunkSize, World.chunkSize];
         GenerateChunkTiles();
+        GenerateChunkDetails();
     }
 
     ///<summary>Generates the tiles for the chunk</summary>
@@ -39,23 +40,38 @@ public class Chunk{
         for(int x = 0; x < World.chunkSize; x++){
             for(int y = 0; y < World.chunkSize; y++){
                 Tile.TileType type = GetTileTypeFromNoise(x, y);
-                Tile tile = new Tile(type, x+(position.x*World.chunkSize), y+(position.y*World.chunkSize), this);
-                // basic adding detail to map, this needs improving upon and should be done in a separate class or method
+                Tiles[x,y] = new Tile(type, x+(position.x*World.chunkSize), y+(position.y*World.chunkSize), this);
+            }
+        }
+    }
+
+    private void GenerateChunkDetails(){
+        for(int x = 0; x < World.chunkSize; x++){
+            for(int y = 0; y < World.chunkSize; y++){
                 if(DetailMap[x, y] > 0.7f){
-                    if(type == Tile.TileType.Grass){
-                        tile.HasTileDetail = true;
+                    if(Tiles[x, y].Type == Tile.TileType.Grass){
+                        Tiles[x, y].HasTileDetail = true;
                         if(DetailMap[x, y] > 0.95f){
-                            tile.TileDetailData = new TileDetail(TileDetail.TileDetailType.Tree, tile);
+                            Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.Tree, Tiles[x, y]);
                         }
                         else
-                        tile.TileDetailData = new TileDetail(TileDetail.TileDetailType.Bush, tile);
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.Bush, Tiles[x, y]);
                     }
-                    else if(type == Tile.TileType.Dirt){
-                        tile.HasTileDetail = true;
-                        tile.TileDetailData = new TileDetail(TileDetail.TileDetailType.Rock, tile);
+                    else if(Tiles[x, y].Type == Tile.TileType.Dirt){
+                        Tiles[x, y].HasTileDetail = true;
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.Rock, Tiles[x, y]);
+                        // need to check for adjacent tiles and change if they're rocks
                     }
                 }
-                Tiles[x, y] = tile;
+            }
+        }
+        //run again after initial setup to ensure adjacent rocks are changed
+        foreach(Tile tile in Tiles){
+            if(tile.HasTileDetail){
+                TileDetail td = tile.TileDetailData;
+                if(td.Type == TileDetail.TileDetailType.Rock){
+                    td.Type = TileDetail.TileDetailType.Rock; // will this work or will I need to set it to none first?
+                }
             }
         }
     }

@@ -14,11 +14,14 @@ public class TileInformationUiController : MonoBehaviour
     }
 
     public void UpdateTileInformation(Tile tile){
+        int chunkPosX = WorldController.Instance.GetChunkFromGlobalPosition(new Vector2Int(tile.GlobalPosX, tile.GlobalPosY)).position.x;
+        int chunkPosY = WorldController.Instance.GetChunkFromGlobalPosition(new Vector2Int(tile.GlobalPosX, tile.GlobalPosY)).position.y;
+        
         if(tile.TileDetailData.Type != TileDetail.TileDetailType.None){
-            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nTile Detail: {tile.TileDetailData.Type} \nSprite: {tile.TileDetailData.name}";
+            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY}\nTile Detail: {tile.TileDetailData.Type} \nSprite: {tile.TileDetailData.name}";
         }
         else{
-            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY}";
+            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None";
         }
     }
 }
