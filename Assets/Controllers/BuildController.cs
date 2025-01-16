@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,8 +9,10 @@ public class BuildController : MonoBehaviour {
     public Button buildWallButton;
     public Button bulldozeButton;
 
-    bool isBuildingWall = false;
-    bool isBulldozing = false;
+    public static bool isBuildingWall = false;
+   public static bool isBulldozing = false;
+
+   public event Action onCancel;
 
     void Update(){
         if(Input.GetMouseButtonUp(1)){ // right click

@@ -50,5 +50,8 @@ TagManager:
   - name: PlayerSprite
     uniqueID: 295685055
     locked: 0
+  - name: Selection
+    uniqueID: 1386625309
+    locked: 0
   m_RenderingLayers:
   - Default
