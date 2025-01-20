@@ -18,7 +18,8 @@ public class TileInformationUiController : MonoBehaviour
         int chunkPosY = WorldController.Instance.GetChunkFromGlobalPosition(new Vector2Int(tile.GlobalPosX, tile.GlobalPosY)).position.y;
         
         if(tile.TileDetailData.Type != TileDetail.TileDetailType.None){
-            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY}\nTile Detail: {tile.TileDetailData.Type} \nSprite: {tile.TileDetailData.name}";
+            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY}\nTile Detail: {tile.TileDetailData.Type} \nSprite: {tile.TileDetailData.name}" + 
+            $"\nDescription: {tile.TileDetailData.Description}\nHit Points: {tile.TileDetailData.CurrentHitPoints}/{tile.TileDetailData.MaxHitPoints}";
         }
         else{
             tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None";

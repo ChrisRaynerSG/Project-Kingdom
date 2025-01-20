@@ -44,7 +44,7 @@ public class World{
             return cachedChunks[position];
         }
         else{
-            Debug.LogError($"Chunk not found at position: {position.x} {position.y}");
+            //Debug.LogError($"Chunk not found at position: {position.x} {position.y}");
             return null;
         } 
     }

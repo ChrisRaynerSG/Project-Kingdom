@@ -57,6 +57,9 @@ public class MouseController : MonoBehaviour{
                 onTilesSelected?.Invoke(tiles);
             }
             isDragging = false;
+            if(!BuildController.isBuildingWall){
+                tile.TileDetailData.CurrentHitPoints -= 10;
+            }
         }
     }
 

@@ -12,6 +12,7 @@ public class WorldController : MonoBehaviour{
     [SerializeField] int seed = 0;
 
     Dictionary<Vector2Int, Chunk> activeChunks = new Dictionary<Vector2Int, Chunk>();
+    Dictionary<Vector2Int, GameObject> chunkGameObjects = new Dictionary<Vector2Int, GameObject>();
 
     private World world;
 
@@ -27,33 +28,38 @@ public class WorldController : MonoBehaviour{
     }
 
     public void Start(){
+        SpriteLoader sl = SpriteLoader.GetInstance; // set up sprite loader when world is created so that sprites are loaded before chunks are generated
         GenerateWorld();
     }
 
     public void Update(){
         Vector2Int playerChunkPosition = GetPlayerChunkPosition();
-
         // need to update this to remove chunks that are outside the view distance
-
         // foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks){
         //     if(Vector2Int.Distance(playerChunkPosition, chunk.Key) > world.ViewDistance){
         //         activeChunks.Remove(chunk.Key);
         //     }
         // }
-
-        for(int x = playerChunkPosition.x - world.ViewDistance; x < playerChunkPosition.x + world.ViewDistance; x++){
-            for(int y = playerChunkPosition.y - world.ViewDistance; y < playerChunkPosition.y + world.ViewDistance; y++){
+        for(int x = playerChunkPosition.x - world.ViewDistance; x <= playerChunkPosition.x + world.ViewDistance; x++){
+            for(int y = playerChunkPosition.y - world.ViewDistance; y <= playerChunkPosition.y + world.ViewDistance; y++){
                 Vector2Int chunkPosition = new Vector2Int(x, y);
                 if(activeChunks.ContainsKey(chunkPosition)){
                     continue;
-                }
-                else if(world.cachedChunks.ContainsKey(chunkPosition)){
-                    activeChunks.Add(chunkPosition, world.cachedChunks[chunkPosition]);
                 }
                 else{
                     GenerateChunk(chunkPosition, x, y);
                 }
             }
+        }
+        List<Vector2Int> chunksToUnload = new List<Vector2Int>();
+        foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks){
+            if (Mathf.Abs(playerChunkPosition.x - chunk.Key.x) > world.ViewDistance || 
+            Mathf.Abs(playerChunkPosition.y - chunk.Key.y) > world.ViewDistance) {
+            chunksToUnload.Add(chunk.Key);
+            }
+        }
+        foreach(Vector2Int chunk in chunksToUnload){
+            unloadChunk(chunk);
         }
     }
     private void GenerateWorld(){
@@ -106,7 +112,15 @@ public class WorldController : MonoBehaviour{
         }
 
         chunk = world.GetChunkFromCoordinates(chunkPosition);
-        return chunk.Tiles[tilePosition.x, tilePosition.y];
+        if(chunk == null){
+            return null;
+        }
+        else if(chunk.Tiles[tilePosition.x, tilePosition.y] == null){
+            return null;
+        }
+        else{
+            return chunk.Tiles[tilePosition.x, tilePosition.y];
+        }
     }
 
     public Chunk GetChunkFromGlobalPosition(Vector2Int globalPosition){
@@ -124,30 +138,76 @@ public class WorldController : MonoBehaviour{
         return chunk;
     }
 
-    private void GenerateChunk(Vector2Int chunkPosition, int x, int y){
-        Chunk chunk = new Chunk(chunkPosition);
-        world.cachedChunks.Add(chunkPosition, chunk);
-        activeChunks.Add(chunkPosition, chunk);
-        GameObject newChunk = Instantiate(chunkPrefab, new Vector3(x,y,0), Quaternion.identity, transform);
-        newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
-        newChunk.GetComponent<ChunkController>().Initialise(chunk);
+    private void unloadChunk(Vector2Int chunkPosition){
+        if(activeChunks.TryGetValue(chunkPosition, out Chunk chunk)){
+            activeChunks.Remove(chunkPosition);
+            if (chunkGameObjects.TryGetValue(chunkPosition, out GameObject chunkObj)){
+                Destroy(chunkObj);
+                chunkGameObjects.Remove(chunkPosition);
+            }
+        }
+    }
 
+    private void GenerateChunk(Vector2Int chunkPosition, int x, int y){
+
+        //Debug.Log($"cachedChunks count: {world.cachedChunks.Count}");
+
+        if(activeChunks.ContainsKey(chunkPosition)){
+            // chunk already exists
+            return;
+        }
+        // if chunk is in cache make a gameobject for it
+        else if(world.cachedChunks.TryGetValue(chunkPosition, out Chunk cachedChunk)){
+            //Debug.Log("Generating chunk from cache");
+            activeChunks.Add(chunkPosition, cachedChunk);
+            GameObject newCachedChunk = Instantiate(chunkPrefab, new Vector3(x,y,0), Quaternion.identity, transform);
+            newCachedChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
+            newCachedChunk.GetComponent<ChunkController>().Initialise(cachedChunk);
+            chunkGameObjects.Add(chunkPosition, newCachedChunk);
+            UpdateConnectedTiles(chunkPosition, cachedChunk);
+        }
+        else
+        {
+            //Debug.Log("Generating new chunk");
+            Chunk chunk = new Chunk(chunkPosition);
+            world.cachedChunks.Add(chunkPosition, chunk);
+            activeChunks.Add(chunkPosition, chunk);
+            GameObject newChunk = Instantiate(chunkPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
+            newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
+            newChunk.GetComponent<ChunkController>().Initialise(chunk);
+            chunkGameObjects.Add(chunkPosition, newChunk);
+            UpdateConnectedTiles(chunkPosition, chunk);
+        }
         //need to go over tileDetail again to update adjacent rocks/walls etc may cause issues with tiles in adjacent chunks this could also be a massive performance hit? Tested it, it is...
         // what would be a better way to do this?
-        foreach(Tile t in chunk.Tiles){
-            if (t.HasTileDetail){
+    }
+
+    // to fix walls and rocks looking like chocolate mmm...
+    private void UpdateConnectedTiles(Vector2Int chunkPosition, Chunk chunk)
+    {
+        foreach (Tile t in chunk.Tiles)
+        {
+            if (t.HasTileDetail)
+            {
                 TileDetail td = t.TileDetailData;
-                if(td.Type == TileDetail.TileDetailType.Rock){
+                if (td.Type == TileDetail.TileDetailType.Rock)
+                {
                     td.Type = TileDetail.TileDetailType.Rock;
+                }
+                if(td.Type == TileDetail.TileDetailType.Wall)
+                {
+                    td.Type = TileDetail.TileDetailType.Wall;
                 }
             }
         }
         //check if any adjacent chunks have rocks and update the tiles
         List<Chunk> chunks = new List<Chunk>();
-        for(int i = 0; i<8; i++){
+        for (int i = 0; i < 8; i++)
+        {
             int offsetX = 0;
             int offsetY = 0;
-            switch(i){
+            switch (i)
+            {
                 case 0:
                     offsetX = -1;
                     offsetY = 1;
@@ -183,19 +243,28 @@ public class WorldController : MonoBehaviour{
                 default:
                     break;
             }
-            if(activeChunks.TryGetValue(new Vector2Int(chunkPosition.x + offsetX, chunkPosition.y + offsetY), out Chunk c)){
+            if (activeChunks.TryGetValue(new Vector2Int(chunkPosition.x + offsetX, chunkPosition.y + offsetY), out Chunk c))
+            {
                 chunks.Add(c);
             }
         }
-        foreach(Chunk c in chunks){
-            foreach(Tile t in c.Tiles){ //could change this so only looking at the edge tiles
-                if (t.HasTileDetail){
+        foreach (Chunk c in chunks)
+        {
+            foreach (Tile t in c.Tiles)
+            { //could change this so only looking at the edge tiles
+                if (t.HasTileDetail)
+                {
                     TileDetail td = t.TileDetailData;
-                    if(td.Type == TileDetail.TileDetailType.Rock){
+                    if (td.Type == TileDetail.TileDetailType.Rock)
+                    {
                         td.Type = TileDetail.TileDetailType.Rock;
+                    }
+                    if (td.Type == TileDetail.TileDetailType.Wall)
+                    {
+                        td.Type = TileDetail.TileDetailType.Wall;
                     }
                 }
             }
         }
-    }     
+    }
 }

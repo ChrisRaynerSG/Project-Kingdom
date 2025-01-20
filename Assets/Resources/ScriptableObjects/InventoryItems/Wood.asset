@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3aa237c09144e5a94b36f2875fe46c, type: 3}
+  m_Name: Wood
+  m_EditorClassIdentifier: 
+  maxStackSize: 100
+  itemName: Wood
+  description: Woodn't it be nice if you could build something cool with this?
+  value: 5
+  isStackable: 1
+  isEdible: 0
+  isDrinkable: 0
+  isEquipable: 0
+  isFlammable: 1
+  massPerUnit: 5
+  icon: {fileID: 3966232018238107490, guid: c46c1ccfb488d470da36a5bdcd335e6f, type: 3}

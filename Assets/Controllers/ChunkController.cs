@@ -9,7 +9,6 @@ public class ChunkController : MonoBehaviour{
             GameObject newTile = Instantiate(tilePrefab, new Vector3(tile.GlobalPosX, tile.GlobalPosY, 0), Quaternion.identity, transform);
             newTile.GetComponent<TileController>().Initialise(tile);
             newTile.name = $"{tile.Type} tile {tile.GlobalPosX} {tile.GlobalPosY}";
-            
         }
     }
 }

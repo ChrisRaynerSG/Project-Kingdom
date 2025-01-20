@@ -33,7 +33,7 @@ public class BuildController : MonoBehaviour {
         if(isBuildingWall){
             foreach(Tile tile in tiles){
                 if(tile.HasTileDetail){
-                    Debug.Log("Tile already has a detail");
+                    //Debug.Log("Tile already has a detail");
                 //return; // don't build on top of existing tile details
                 }
                 else{
@@ -41,6 +41,8 @@ public class BuildController : MonoBehaviour {
                     {
                         tile.HasTileDetail = true;
                         tile.TileDetailData.Type = TileDetail.TileDetailType.Wall;
+                        tile.TileDetailData.Description = "A wall";
+                        tile.TileDetailData.MaxHitPoints = 100;
                         UpdateAdjacentTiles(tile);
                     }
                 }
@@ -51,13 +53,14 @@ public class BuildController : MonoBehaviour {
                 if(tile.HasTileDetail){
                     tile.HasTileDetail = false;
                     tile.TileDetailData.Type = TileDetail.TileDetailType.None;
+                    tile.TileDetailData.Description = "No detail";
                     UpdateAdjacentTiles(tile);
                 }
             }
         }
     }
 
-    private static void UpdateAdjacentTiles(Tile tile)
+    public static void UpdateAdjacentTiles(Tile tile) //maybe move this to a helper class?
     {
         for (int i = 0; i < 8; i++)
         {
