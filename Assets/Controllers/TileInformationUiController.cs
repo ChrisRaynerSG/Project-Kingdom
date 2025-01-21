@@ -22,7 +22,12 @@ public class TileInformationUiController : MonoBehaviour
             $"\nDescription: {tile.TileDetailData.Description}\nHit Points: {tile.TileDetailData.CurrentHitPoints}/{tile.TileDetailData.MaxHitPoints}";
         }
         else{
-            tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None";
+            if(tile.inventoryItem != null){
+                tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None \nInventory Item: {tile.inventoryItem.Item.name} \nQuantity: {tile.inventoryItem.Quantity}";
+            }
+            else{
+                tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None";
+            }
         }
     }
 }

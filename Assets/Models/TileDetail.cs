@@ -1,5 +1,7 @@
 using System;
-using System.Diagnostics;
+
+
+
 
 public class TileDetail{ 
     // extend this class with buildable tile detail which includes materials and costs? 
@@ -42,18 +44,20 @@ public class TileDetail{
             if(currentHitPoints <= 0){
                 currentHitPoints = 0;
                 OnTileHitpointsZero?.Invoke(this);
+                Type = TileDetailType.None;
             }
         }
     }
     TileDetailType type;
     public TileDetailType Type{
         get => type;
-        set{
+        set
+        {
             type = value;
+            SetTileType();
             OnTileDetailPropertyChanged?.Invoke(this);
         }
     }
-
     public Tile TileData { get; private set;}
     public bool IsTraversable {get; set;} = true;
     
@@ -64,8 +68,13 @@ public class TileDetail{
     public TileDetail(TileDetailType type, Tile tile){
         this.type = type;
         TileData = tile;
+        SetTileType();
 
-        switch(type){
+    }
+    private void SetTileType()
+    {
+        switch (type)
+        {
             case TileDetailType.Bush:
                 name = "Bush";
                 Description = "A small bush";
@@ -73,7 +82,7 @@ public class TileDetail{
                 isFlammable = true;
                 isHarvestable = true;
                 IsTraversable = true;
-                DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItems[0], 3); // maybe change this to use a dictionary name to grab the item
+                DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItems[0], UnityEngine.Random.Range(0,5), TileData); // maybe change this to use a dictionary name to grab the item
                 break;
 
             case TileDetailType.Tree:
@@ -83,7 +92,7 @@ public class TileDetail{
                 isFlammable = true;
                 isHarvestable = true;
                 IsTraversable = false;
-                DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItemDictionary.TryGetValue("Wood", out InventoryItemSO wood) ? wood : null, 5);
+                DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItemDictionary.TryGetValue("Wood", out InventoryItemSO wood) ? wood : null, UnityEngine.Random.Range(2, 9), TileData);
                 break;
 
             case TileDetailType.Rock:
@@ -91,7 +100,7 @@ public class TileDetail{
                 Description = "A large rock";
                 MaxHitPoints = 100;
                 isFlammable = false;
-                isHarvestable = true;
+                isHarvestable = false; // set to true later when fixed
                 IsTraversable = false;
                 break;
 
@@ -111,13 +120,12 @@ public class TileDetail{
                 isFlammable = false;
                 isHarvestable = false;
                 IsTraversable = true;
-                tile.HasTileDetail = false;
+                TileData.HasTileDetail = false;
                 break;
 
             default:
-                Debug.Assert(false, "TileDetailType not handled");
+                UnityEngine.Debug.Assert(false, "TileDetailType not handled");
                 break;
-
         }
     }
 }

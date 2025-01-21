@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class InventoryItem{
     public InventoryItemSO Item {get; private set;}
@@ -6,14 +7,19 @@ public class InventoryItem{
     public int Quantity {get; private set;}
     public float TotalMass => Quantity * Item.massPerUnit;
     public float TotalValue => Quantity * Item.value;
-    public bool isInInventory; 
+    public bool isInInventory = false; 
     //If the item is on the floor this will be false, allows for later moving the 
     //player to the item if it is on the floor and the player is out of range and 
     //wants to interact with it
+    public Tile tile;
+    //If the item is on the floor this will be the tile it is on
+    //If the item is in the inventory this will be null
     
-    public InventoryItem(InventoryItemSO item, int quantity){
+    public InventoryItem(InventoryItemSO item, int quantity, Tile tile){
         Item = item;
         Quantity = quantity;
+        this.tile = tile;
+        tile.inventoryItem = this;
     }
 
     public void AddQuantity(int amount){
