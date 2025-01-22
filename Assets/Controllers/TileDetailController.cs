@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class TileDetailController : MonoBehaviour{
 
-    Sprite[] basicTiles; 
-    //Dictionary<string,Sprite> wallTiles;// needs changing later when we have more tile types
     [SerializeField] Sprite tileDetailSprite;
     [SerializeField] GameObject InventoryItemPrefab;
     SpriteRenderer sr;
@@ -13,7 +11,7 @@ public class TileDetailController : MonoBehaviour{
         sr = GetComponent<SpriteRenderer>();
         HandleTileDetailType(TileDetailData);
         TileDetailData.OnTileDetailPropertyChanged += TileDetailTypeChanged;
-        TileDetailData.OnTileHitpointsZero += TileDestroyed;
+        TileDetailData.OnTileHitpointsZero += TileDetailDestroyed;
         sr.sortingLayerName = "TileDetail";
         if(!tileDetailData.IsTraversable){
             AddCollider();
@@ -86,7 +84,7 @@ public class TileDetailController : MonoBehaviour{
         wallSpriteName = TileDetailsUtils.CleanWallSpriteName(wallSpriteName, nameBeforeNumbers);
         sr.sprite = SpriteLoader.GetInstance.WallTileDictionary.TryGetValue(wallSpriteName, out Sprite wallSprite) ? wallSprite : null;
     }
-    public void TileDestroyed(TileDetail td){
+    public void TileDetailDestroyed(TileDetail td){
         //Debug.Log("Tile destroyed");
         if(td.isHarvestable){
             //if space in player or pawn?? inventory put in inventory
@@ -99,6 +97,10 @@ public class TileDetailController : MonoBehaviour{
             SpriteRenderer invItemSr = newItem.GetComponent<SpriteRenderer>();
             invItemSr.sortingLayerName="TileDetail";
             invItemSr.sprite = td.DroppedItem.Item.icon;
+            }
+            else{
+                td.TileData.inventoryItem = null;
+                td.DroppedItem = null;
             }
             // maybe change this to inventoryitem later
             //}

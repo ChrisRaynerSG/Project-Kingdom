@@ -29,7 +29,7 @@ public class TileDetail{
         currentHitPoints = maxHitPoints;
     }}
 
-    public InventoryItem DroppedItem {get; private set;}
+    public InventoryItem DroppedItem {get; set;}
 
     int currentHitPoints;
 
