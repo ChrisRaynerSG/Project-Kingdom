@@ -16,6 +16,7 @@ public class Tile{
     
     public bool HasTileDetail {get; set;} = false;
     public TileDetail TileDetailData {get; set;}
+    public bool HasInventoryItem {get; set;} = false;
     public InventoryItem inventoryItem {get; set;}
 
     public bool IsTraversable{

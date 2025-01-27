@@ -20,6 +20,7 @@ public class InventoryItem{
         Quantity = quantity;
         this.tile = tile;
         tile.inventoryItem = this;
+        tile.HasInventoryItem = true;
     }
 
     public void AddQuantity(int amount){

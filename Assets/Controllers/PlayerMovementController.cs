@@ -8,6 +8,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         playerMovementData = PlayerMovement.CreatePlayerMovement();
         playerTransform = transform;
+        SetPlayerStartPosition();
     }
     void Update()
     {
@@ -27,5 +28,14 @@ public class PlayerMovementController : MonoBehaviour
             newPosition.x += Input.GetAxis("Horizontal") * playerMovementData.MovementSpeed * Time.deltaTime;
         }
         playerTransform.position = newPosition;
+    }
+
+    public void SetPlayerStartPosition()
+    {
+        Tile tileToCheck = WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int((int)playerTransform.position.x, (int)playerTransform.position.y));
+        while(!tileToCheck.IsTraversable){
+            playerTransform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 1, playerTransform.position.z);
+            tileToCheck = WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int((int)playerTransform.position.x, (int)playerTransform.position.y));
+        }
     }
 }

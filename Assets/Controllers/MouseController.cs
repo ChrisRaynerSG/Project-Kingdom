@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,6 +14,8 @@ public class MouseController : MonoBehaviour{
 
     public Tile tileAtStartOfDrag;
     public Tile tileAtEndOfDrag;
+
+    private bool isContextMenuOpen = false;
 
     private bool isDragging = false;
 
@@ -185,6 +188,26 @@ public class MouseController : MonoBehaviour{
         }
     }
         return tiles; // return a list of tiles
+    }
+
+    private void RightClickContextMenu(){
+
+        if(Input.GetMouseButtonDown(1)){
+
+            Tile tile = GetTileAtMousePosition(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            if(tile.HasTileDetail){
+                isContextMenuOpen = true;
+                //handle context menu
+            }
+            if(tile.HasInventoryItem){
+                isContextMenuOpen = true;
+                //handle context menu
+            }
+            // if right click on tile with no tile detail then show context menu
+        }
+        // if right click on tile with inventory item then show context menu
+        // if right click on tile with tile detail then show context menu
+        
     }
 
     public static void OnTileHoveredOver(Tile tile){

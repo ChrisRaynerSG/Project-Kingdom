@@ -92,13 +92,14 @@ public class TileDetailController : MonoBehaviour{
             //if(space in player or pawn inventory){}
             //else{
             if(td.DroppedItem.Quantity > 0){
-            GameObject newItem = Instantiate(InventoryItemPrefab, new Vector3(td.TileData.GlobalPosX, td.TileData.GlobalPosY, 0), Quaternion.identity,transform.parent);
-            newItem.GetComponent<InventoryItemController>().Initialise(td.DroppedItem);
-            SpriteRenderer invItemSr = newItem.GetComponent<SpriteRenderer>();
-            invItemSr.sortingLayerName="TileDetail";
-            invItemSr.sprite = td.DroppedItem.Item.icon;
+                GameObject newItem = Instantiate(InventoryItemPrefab, new Vector3(td.TileData.GlobalPosX, td.TileData.GlobalPosY, 0), Quaternion.identity,transform.parent);
+                newItem.GetComponent<InventoryItemController>().Initialise(td.DroppedItem);
+                SpriteRenderer invItemSr = newItem.GetComponent<SpriteRenderer>();
+                invItemSr.sortingLayerName="TileDetail";
+                invItemSr.sprite = td.DroppedItem.Item.icon;
             }
             else{
+                td.TileData.HasInventoryItem = false;
                 td.TileData.inventoryItem = null;
                 td.DroppedItem = null;
             }
