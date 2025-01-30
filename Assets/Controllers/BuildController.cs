@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 public class BuildController : MonoBehaviour {
 
@@ -10,18 +9,22 @@ public class BuildController : MonoBehaviour {
     public Button bulldozeButton;
 
     public static bool isBuildingWall = false;
-   public static bool isBulldozing = false;
+    public static bool isBulldozing = false;
 
-   public event Action onCancel;
+    public static bool isDoingNothing = true;
+
+    public event Action onCancel;
 
     void Update(){
         if(Input.GetMouseButtonUp(1)){ // right click
             isBuildingWall = false;
             isBulldozing = false;
+            isDoingNothing = true;
         }
         if(Input.GetKeyDown(KeyCode.Escape)){ // escape key
             isBuildingWall = false;
             isBulldozing = false;
+            isDoingNothing = true;
         }
     }
 

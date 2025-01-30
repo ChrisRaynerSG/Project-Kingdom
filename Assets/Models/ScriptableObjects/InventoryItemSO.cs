@@ -17,6 +17,7 @@ public class InventoryItemSO : ScriptableObject {
     public string itemName;
     public string description;
     public int value;
+    public bool isUsable;
     public bool isStackable;
     public bool isEdible;
     public bool isDrinkable;

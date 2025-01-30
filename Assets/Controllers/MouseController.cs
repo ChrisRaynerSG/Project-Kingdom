@@ -7,13 +7,18 @@ using UnityEngine.Rendering;
 public class MouseController : MonoBehaviour{
 
     public GameObject selectionBoxPrefab; // reference to the selection box prefab, will need to use object pooling for this
-
+    public GameObject ContextMenuPrefab;
+    public GameObject contextMenuInstance;
     public static event Action<Tile> onTileHoveredOver;
     public static event Action<Tile> onTileClicked;
     public static event Action<List<Tile>> onTilesSelected;
 
+    public bool contextMenuOpen = false;
+
     public Tile tileAtStartOfDrag;
     public Tile tileAtEndOfDrag;
+
+    public Tile tileForContextMenu;
 
     private bool isContextMenuOpen = false;
 
@@ -60,8 +65,28 @@ public class MouseController : MonoBehaviour{
                 onTilesSelected?.Invoke(tiles);
             }
             isDragging = false;
-            if(!BuildController.isBuildingWall){
+    
+            if(BuildController.isDoingNothing){ // remove this later when we have more options
                 tile.TileDetailData.CurrentHitPoints -= 10;
+            }
+        }
+        if(Input.GetMouseButtonUp(1)){
+            if(BuildController.isDoingNothing){
+                if(contextMenuOpen){
+                    Destroy(contextMenuInstance);
+                    contextMenuOpen = false;
+                }
+                tileForContextMenu = tile;
+                contextMenuInstance = Instantiate(ContextMenuPrefab, GameObject.Find("Canvas").transform);
+                contextMenuInstance.GetComponent<RectTransform>().position = Input.mousePosition;
+                contextMenuInstance.GetComponent<ContextMenuController>().Initialise(tileForContextMenu);
+                contextMenuOpen = true;
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.Escape)){// remove context menu on escape key
+            if(contextMenuOpen){
+                Destroy(contextMenuInstance);
+                contextMenuOpen = false;
             }
         }
     }
@@ -189,27 +214,6 @@ public class MouseController : MonoBehaviour{
     }
         return tiles; // return a list of tiles
     }
-
-    private void RightClickContextMenu(){
-
-        if(Input.GetMouseButtonDown(1)){
-
-            Tile tile = GetTileAtMousePosition(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            if(tile.HasTileDetail){
-                isContextMenuOpen = true;
-                //handle context menu
-            }
-            if(tile.HasInventoryItem){
-                isContextMenuOpen = true;
-                //handle context menu
-            }
-            // if right click on tile with no tile detail then show context menu
-        }
-        // if right click on tile with inventory item then show context menu
-        // if right click on tile with tile detail then show context menu
-        
-    }
-
     public static void OnTileHoveredOver(Tile tile){
         onTileHoveredOver?.Invoke(tile);
     }

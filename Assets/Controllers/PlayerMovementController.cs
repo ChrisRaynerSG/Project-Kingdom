@@ -4,6 +4,7 @@ public class PlayerMovementController : MonoBehaviour
 {
     PlayerMovement playerMovementData;
     Transform playerTransform;
+    public Rigidbody2D playerRigidbody;
     void Start()
     {
         playerMovementData = PlayerMovement.CreatePlayerMovement();
@@ -27,7 +28,13 @@ public class PlayerMovementController : MonoBehaviour
         {
             newPosition.x += Input.GetAxis("Horizontal") * playerMovementData.MovementSpeed * Time.deltaTime;
         }
-        playerTransform.position = newPosition;
+        // how to slide along non-traversable tiles?
+        // need to change this logic as its pretty bad, and causes the player to jitter when they are on the edge of a non-traversable tile
+        Tile tileToCheck = WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int((int)newPosition.x, (int)newPosition.y));
+
+        if(tileToCheck.IsTraversable && tileToCheck.TileDetailData.IsTraversable){
+            playerTransform.position = newPosition;
+        }
     }
 
     public void SetPlayerStartPosition()

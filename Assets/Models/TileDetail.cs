@@ -36,6 +36,8 @@ public class TileDetail{
     bool isFlammable;
     public bool isHarvestable;
 
+    public bool isInteractable;
+
 
     public int CurrentHitPoints{
         get => currentHitPoints;
