@@ -1,11 +1,12 @@
-using System.Numerics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ContextMenuController : MonoBehaviour {
 
     public GameObject contextMenuButtonPrefab;
-    private Tile tile;
+    public GameObject lineBreakPrefab;
+    public Tile tile;
     private TileDetail tileDetail;
 
     public void Initialise(Tile tile)
@@ -13,13 +14,17 @@ public class ContextMenuController : MonoBehaviour {
         this.tile = tile;
         tileDetail = tile.TileDetailData;
         SetupButtons();
+        Resize();
         
     }
 
     private void SetupButtons()
     {
         GameObject examineTileButton = Instantiate(contextMenuButtonPrefab, transform);
-        examineTileButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine Tile";
+        string examineButtonText = examineTileButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine Tile";
+        ExamineButtonController ebc = examineTileButton.AddComponent<ExamineButtonController>();
+        ebc.Initialise(this, examineButtonText);
+
         GameObject moveToTileButton = Instantiate(contextMenuButtonPrefab, transform);
         moveToTileButton.GetComponentInChildren<TextMeshProUGUI>().text = "Move To Tile";
 
@@ -42,8 +47,14 @@ public class ContextMenuController : MonoBehaviour {
 
         if (tileDetail.Type != TileDetail.TileDetailType.None)
         {
+
+            PlaceLineBreak();
+
             GameObject examineTileDetailButton = Instantiate(contextMenuButtonPrefab, transform);
-            examineTileDetailButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine " + tileDetail.name;
+            string examineTileDetailText = examineTileDetailButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine " + tileDetail.name;
+            ExamineButtonController etdbc = examineTileDetailButton.AddComponent<ExamineButtonController>();
+            etdbc.Initialise(this, examineTileDetailText);
+            
             if (tileDetail.isHarvestable)
             {
                 // harvest button only if player has correct tool?
@@ -60,12 +71,15 @@ public class ContextMenuController : MonoBehaviour {
 
         // another line break here.
 
-        if (tile.HasInventoryItem)
+        if (tile.HasInventoryItem && !tile.HasTileDetail)
         {
+            PlaceLineBreak();
             InventoryItem inventoryItem = tile.inventoryItem;
 
             GameObject examineInventoryItemButton = Instantiate(contextMenuButtonPrefab, transform);
-            examineInventoryItemButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine " + inventoryItem.Item.itemName;
+            string examineInventoryItemButtonText = examineInventoryItemButton.GetComponentInChildren<TextMeshProUGUI>().text = "Examine " + inventoryItem.Item.itemName;
+            ExamineButtonController eiibc = examineInventoryItemButton.AddComponent<ExamineButtonController>();
+            eiibc.Initialise(this, examineInventoryItemButtonText);
 
             GameObject pickUpInventoryItemButton = Instantiate(contextMenuButtonPrefab, transform);
             pickUpInventoryItemButton.GetComponentInChildren<TextMeshProUGUI>().text = "Pick Up " + inventoryItem.Item.itemName;
@@ -78,7 +92,9 @@ public class ContextMenuController : MonoBehaviour {
             if (inventoryItem.Item.isEdible)
             {
                 GameObject eatButton = Instantiate(contextMenuButtonPrefab, transform);
-                eatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Eat " + inventoryItem.Item.itemName;
+                string eatButtonText = eatButton.GetComponentInChildren<TextMeshProUGUI>().text = "Eat " + inventoryItem.Item.itemName;
+                EatButtonController eatButtonController = eatButton.AddComponent<EatButtonController>();
+                eatButtonController.Initialise(this, eatButtonText);
             }
             if (inventoryItem.Item.isDrinkable)
             {
@@ -93,6 +109,11 @@ public class ContextMenuController : MonoBehaviour {
             // may need more buttons here for different types of inventory items
         }
     }
+
+    public void Resize(){
+        RectTransform rt = GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(rt.sizeDelta.x, (rt.childCount * 30)+10);
+    }
     // public void ShowContextMenu(){
     //     contextMenuInstance.SetActive(true);
     // }
@@ -106,6 +127,11 @@ public class ContextMenuController : MonoBehaviour {
     //     if(Input.GetMouseButtonDown(0)){
     //         HideContextMenu();
     //     }
+    }
+
+    private void PlaceLineBreak(){
+        GameObject lineBreak = Instantiate(lineBreakPrefab, transform);
+
     }
     
 }

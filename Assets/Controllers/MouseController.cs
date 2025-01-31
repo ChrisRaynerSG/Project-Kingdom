@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.EventSystems;
 
 public class MouseController : MonoBehaviour{
 
@@ -66,8 +67,12 @@ public class MouseController : MonoBehaviour{
             }
             isDragging = false;
     
-            if(BuildController.isDoingNothing){ // remove this later when we have more options
+            if(BuildController.isDoingNothing && !EventSystem.current.IsPointerOverGameObject()){ // remove this later when we have more options
                 tile.TileDetailData.CurrentHitPoints -= 10;
+            }
+            if(contextMenuOpen){
+                Destroy(contextMenuInstance);
+                contextMenuOpen = false;
             }
         }
         if(Input.GetMouseButtonUp(1)){

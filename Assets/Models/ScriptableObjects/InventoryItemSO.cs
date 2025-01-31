@@ -25,15 +25,18 @@ public class InventoryItemSO : ScriptableObject {
     public bool isFlammable;
     public float massPerUnit;
     public HashSet<ItemType> itemTypes;
-    public HashSet<ScriptableObject> itemEffects;
+    public List<ScriptableObject> itemEffects;
     public Sprite icon;
 }
 
 [CreateAssetMenu(fileName = "FoodEffect", menuName = "ItemEffects/FoodEffect", order = 0)]
 public class FoodEffect : ScriptableObject{
+
+    public string effectName;
     public int health;
+    public float saturation;
     public int stamina;
-    public int hunger;
+    public float hunger;
     public int thirst;
     public int happiness;
     public int energy;

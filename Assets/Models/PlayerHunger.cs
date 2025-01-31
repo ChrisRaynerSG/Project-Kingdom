@@ -1,0 +1,66 @@
+using System;
+using UnityEngine;
+
+public class PlayerHunger {
+
+    public float currentHunger;
+    public float maxHunger;
+    float hungerDecayRate;
+    float hungerDecayTimer;
+    float hungerDecayInterval;
+    public float currentSaturation;
+    public float maxSaturation;
+    float saturationDecayRate;
+    float saturationDecayTimer;
+    float saturationDecayInterval;
+
+    public event Action onHungerZero;
+    public static event Action<PlayerHunger> onHungerUpdated;
+
+    public PlayerHunger(){
+        this.currentHunger = 100;
+        this.maxHunger = 100;
+        this.hungerDecayRate = 1;
+        this.hungerDecayTimer = 0;
+        this.hungerDecayInterval = 1;
+        this.currentSaturation = 0;
+        this.maxSaturation = 100;
+        this.saturationDecayRate = 1;
+        this.saturationDecayTimer = 0;
+        this.saturationDecayInterval = 1;
+    }
+
+    public void UpdateHunger(float hungerAmount, float saturationAmount){
+        //if hunger is ticking down and player has saturation, use saturation to offset hunger
+        if(this.currentSaturation > 0 && hungerAmount < 0 && saturationAmount <0){
+            this.currentSaturation += saturationAmount;
+            if(this.currentSaturation > this.maxSaturation){
+                this.currentSaturation = this.maxSaturation;
+            }
+            if(this.currentSaturation < 0){
+                this.currentSaturation = 0;
+            }
+
+        }
+        //if hunger is ticking down and player has no saturation, use hunger to offset hunger
+        else if(this.currentSaturation == 0 && hungerAmount < 0 && saturationAmount < 0){
+            this.currentHunger += hungerAmount;
+            if(this.currentHunger < 0){
+                this.currentHunger = 0;
+                onHungerZero?.Invoke();
+            }
+        }
+        //if hunger is ticking up, add to hunger and saturation
+        else{
+            this.currentHunger += hungerAmount;
+            this.currentSaturation += saturationAmount;
+            if(this.currentHunger > this.maxHunger){
+                this.currentHunger = this.maxHunger;
+            }
+            if(this.currentSaturation > this.maxSaturation){
+                this.currentSaturation = this.maxSaturation;
+            }
+        }
+        onHungerUpdated?.Invoke(this);
+    }
+}

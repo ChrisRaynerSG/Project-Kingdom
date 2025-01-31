@@ -13,7 +13,14 @@ public class InventoryItemController : MonoBehaviour {
             UpdateCount();
             // if item is stackable then show the quantity if it is greater than 1
             // else if the quantity is 1 then don't show the quantity
-
+        }
+    }
+    public void Update(){
+        UpdateCount();
+        if(item.Quantity<=0){
+            item.tile.HasInventoryItem = false;
+            item.tile.inventoryItem = null;
+            Destroy(gameObject);
         }
     }
 
