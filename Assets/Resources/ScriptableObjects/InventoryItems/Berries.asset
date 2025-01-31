@@ -16,10 +16,13 @@ MonoBehaviour:
   itemName: Berries
   description: Some tasty berries, yum.
   value: 1
+  isUsable: 0
   isStackable: 1
   isEdible: 1
   isDrinkable: 0
   isEquipable: 0
   isFlammable: 1
   massPerUnit: 0.1
+  itemEffects:
+  - {fileID: 11400000, guid: 010cd6d7a09a04aa59bd68e98aa8db1a, type: 2}
   icon: {fileID: -1551872415, guid: c46c1ccfb488d470da36a5bdcd335e6f, type: 3}

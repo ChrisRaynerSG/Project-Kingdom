@@ -26,7 +26,9 @@ public class ContextMenuController : MonoBehaviour {
         ebc.Initialise(this, examineButtonText);
 
         GameObject moveToTileButton = Instantiate(contextMenuButtonPrefab, transform);
-        moveToTileButton.GetComponentInChildren<TextMeshProUGUI>().text = "Move To Tile";
+        string moveToTileButtonText = moveToTileButton.GetComponentInChildren<TextMeshProUGUI>().text = "Move To Tile";
+        MoveToButtonController mtbc = moveToTileButton.AddComponent<MoveToButtonController>();
+        mtbc.Initialise(this, moveToTileButtonText);
 
         if (tile.Type == Tile.TileType.Water)
         {

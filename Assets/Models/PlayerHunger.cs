@@ -10,7 +10,7 @@ public class PlayerHunger {
     float hungerDecayInterval;
     public float currentSaturation;
     public float maxSaturation;
-    float saturationDecayRate;
+    public float saturationDecayRate;
     float saturationDecayTimer;
     float saturationDecayInterval;
 
@@ -28,6 +28,8 @@ public class PlayerHunger {
         this.saturationDecayRate = 1;
         this.saturationDecayTimer = 0;
         this.saturationDecayInterval = 1;
+        PlayerMovementController.playerMoving += UpdateSaturationRateOnMovement;
+        PlayerMovementController.playerNotMoving += UpdateSaturationRateOnStopMovement;
     }
 
     public void UpdateHunger(float hungerAmount, float saturationAmount){
@@ -62,5 +64,11 @@ public class PlayerHunger {
             }
         }
         onHungerUpdated?.Invoke(this);
+    }
+    private void UpdateSaturationRateOnMovement(){
+        saturationDecayRate = -0.0005f;
+    }
+    private void UpdateSaturationRateOnStopMovement(){
+        saturationDecayRate = -0.00005f;
     }
 }
