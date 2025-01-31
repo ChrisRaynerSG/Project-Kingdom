@@ -23,7 +23,15 @@ public class TileInformationUiController : MonoBehaviour
         }
         else{
             if(tile.inventoryItem != null){
-                tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None \nInventory Item: {tile.inventoryItem.Item.name} \nQuantity: {tile.inventoryItem.Quantity}";
+                if(tile.inventoryItem.Item.isEdible){
+                    
+
+                }
+                else{
+                    tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None \nInventory Item: {tile.inventoryItem.Item.name} \nQuantity: {tile.inventoryItem.Quantity}";
+                }
+                
+
             }
             else{
                 tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY} \nTile Detail: None";

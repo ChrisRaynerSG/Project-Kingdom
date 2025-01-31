@@ -1,12 +1,13 @@
+using System.Data.Common;
 using System.Linq;
 using UnityEngine;
 
 public class PlayerHungerController : MonoBehaviour {
 
-    float hungerRate = -0.0005f;
+    float hungerRate = -0.05f;
     float saturationRate = -0.00005f;
 
-    PlayerHunger playerHunger;
+    public PlayerHunger playerHunger;
     public void Awake(){
         this.playerHunger = new PlayerHunger();
     }
@@ -24,6 +25,8 @@ public class PlayerHungerController : MonoBehaviour {
     }
     public void EatFood(InventoryItem food){
 
+        PlayerHealthController playerHealthController = GameObject.Find("Player").GetComponent<PlayerHealthController>();
+        PlayerHealth playerHealth = playerHealthController.playerHealth;
         FoodEffect foodEffect = food.Item.itemEffects.OfType<FoodEffect>().FirstOrDefault();
         if(foodEffect == null){
             Debug.LogWarning("No food effect found on item");
@@ -31,6 +34,7 @@ public class PlayerHungerController : MonoBehaviour {
         }
         else{
             playerHunger.UpdateHunger(foodEffect.hunger, foodEffect.saturation);
+            playerHealth.UpdateHealth(foodEffect.health);
         }
     }
 }
