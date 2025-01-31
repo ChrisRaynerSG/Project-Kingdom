@@ -22,7 +22,7 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         MovePlayer();
-        Camera.main.transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y, Camera.main.transform.position.z);
+        Camera.main.transform.position = new Vector3(playerTransform.position.x +0.5f, playerTransform.position.y +0.5f, Camera.main.transform.position.z);
 
     }
 

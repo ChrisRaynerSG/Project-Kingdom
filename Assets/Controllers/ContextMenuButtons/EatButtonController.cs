@@ -11,14 +11,14 @@ public class EatButtonController : ContextMenuButtonController
         playerMovementController = GameObject.Find("Player").GetComponent<PlayerMovementController>();
         playerHungerController = GameObject.Find("Player").GetComponent<PlayerHungerController>();
 
-        // float distance = Vector2.Distance(playerMovementController.playerTransform.position, new Vector2(contextMenuController.tile.GlobalPosX, contextMenuController.tile.GlobalPosY));
-        // if(distance > 1){
+        float distance = Vector2.Distance(playerMovementController.playerTransform.position, new Vector2(contextMenuController.tile.GlobalPosX, contextMenuController.tile.GlobalPosY));
+        if(distance > 1.5){
             
-        //     while(distance > 1){ // move to tile if not adjacent
-        //         playerMovementController.MoveToTile(contextMenuController.tile);
-        //         distance = Vector2.Distance(playerMovementController.playerTransform.position, new Vector2(contextMenuController.tile.GlobalPosX, contextMenuController.tile.GlobalPosY));   
-        //     }
-        // }
+            while(distance >= 2){ // move to adjacent tile if not adjacent
+                playerMovementController.MoveToTile(contextMenuController.tile);
+                distance = Vector2.Distance(playerMovementController.playerTransform.position, new Vector2(contextMenuController.tile.GlobalPosX, contextMenuController.tile.GlobalPosY));   
+            }
+        }
         //then eat food
         FoodEffect foodEffect = contextMenuController.tile.inventoryItem.Item.itemEffects.OfType<FoodEffect>().FirstOrDefault();
         playerHungerController.EatFood(contextMenuController.tile.inventoryItem);

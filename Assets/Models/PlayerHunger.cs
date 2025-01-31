@@ -14,8 +14,13 @@ public class PlayerHunger {
     float saturationDecayTimer;
     float saturationDecayInterval;
 
-    public event Action onHungerZero;
+    public static event Action onHungerZero;
     public static event Action<PlayerHunger> onHungerUpdated;
+    public static event Action onHunger100;
+    public static event Action onHunger75;
+    public static event Action onHunger50;
+    public static event Action onHunger25;
+
 
     public PlayerHunger(){
         this.currentHunger = 100;
@@ -47,6 +52,15 @@ public class PlayerHunger {
         //if hunger is ticking down and player has no saturation, use hunger to offset hunger
         else if(this.currentSaturation == 0 && hungerAmount < 0 && saturationAmount < 0){
             this.currentHunger += hungerAmount;
+            if(this.currentHunger == 75){
+                onHunger75?.Invoke();
+            }
+            if(this.currentHunger == 50){
+                onHunger50?.Invoke();
+            }
+            if(this.currentHunger == 25){
+                onHunger25?.Invoke();
+            }
             if(this.currentHunger < 0){
                 this.currentHunger = 0;
                 onHungerZero?.Invoke();
@@ -58,6 +72,7 @@ public class PlayerHunger {
             this.currentSaturation += saturationAmount;
             if(this.currentHunger > this.maxHunger){
                 this.currentHunger = this.maxHunger;
+                onHunger100?.Invoke();
             }
             if(this.currentSaturation > this.maxSaturation){
                 this.currentSaturation = this.maxSaturation;
