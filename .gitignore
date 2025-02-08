@@ -46,7 +46,9 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-*.PSD
+
+*.psd
+*.psd.meta
 
 /GothicUI2
 /Fantasy Wooden GUI Free
