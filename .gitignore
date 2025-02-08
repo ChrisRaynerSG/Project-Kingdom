@@ -46,6 +46,10 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.PSD
+
+/GothicUI2
+/Fantasy Wooden GUI Free
 
 # Unity3D generated meta files
 *.pidb.meta
