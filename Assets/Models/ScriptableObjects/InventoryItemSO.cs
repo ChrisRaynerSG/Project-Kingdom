@@ -40,6 +40,7 @@ public class FoodEffect : ScriptableObject{
     public int thirst;
     public int happiness;
     public int energy;
+    public float eatTime;
 }
 
 [CreateAssetMenu(fileName = "DrinkEffect", menuName = "ItemEffects/DrinkEffect", order = 0)]

@@ -13,12 +13,14 @@ public class TileController : MonoBehaviour {
         // Set up tile detail controller
         GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
         newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
+        TileData.TileDetailData.TileDetailController = newTileDetail.GetComponent<TileDetailController>();
     }
     else{ // set up a blank detail game object
         TileDetail tileDetail = new TileDetail(TileDetail.TileDetailType.None, TileData);
         TileData.TileDetailData = tileDetail;
         GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
         newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
+        TileData.TileDetailData.TileDetailController = newTileDetail.GetComponent<TileDetailController>();
     
     }
     //GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/VeryBasicTils}"); // Change to load tile type later?
@@ -28,7 +30,7 @@ public class TileController : MonoBehaviour {
             GetComponent<SpriteRenderer>().material.color = Color.blue;
             break;
         case Tile.TileType.Grass:
-            GetComponent<SpriteRenderer>().material.color = Color.green;
+            GetComponent<SpriteRenderer>().material.color = new Color(0.1f, 0.4f, 0.1f);
             break;
         case Tile.TileType.Dirt:
             GetComponent<SpriteRenderer>().material.color = new Color(0.6f, 0.3f, 0.1f);

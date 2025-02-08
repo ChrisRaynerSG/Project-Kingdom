@@ -19,7 +19,7 @@ public class TileInformationUiController : MonoBehaviour
         
         if(tile.TileDetailData.Type != TileDetail.TileDetailType.None){
             tileInformationText.text = $"Tile: {tile.Type} tile \nCo-ords: {tile.GlobalPosX},{tile.GlobalPosY} \nChunk: {chunkPosX},{chunkPosY}\nTile Detail: {tile.TileDetailData.Type} \nSprite: {tile.TileDetailData.name}" + 
-            $"\nDescription: {tile.TileDetailData.Description}\nHit Points: {tile.TileDetailData.CurrentHitPoints}/{tile.TileDetailData.MaxHitPoints}";
+            $"\nDescription: {tile.TileDetailData.DescriptionShort}\nHit Points: {tile.TileDetailData.CurrentHitPoints}/{tile.TileDetailData.MaxHitPoints}";
         }
         else{
             if(tile.inventoryItem != null){

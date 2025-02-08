@@ -44,7 +44,7 @@ public class BuildController : MonoBehaviour {
                     {
                         tile.HasTileDetail = true;
                         tile.TileDetailData.Type = TileDetail.TileDetailType.Wall;
-                        tile.TileDetailData.Description = "A wall";
+                        tile.TileDetailData.DescriptionShort = "A wall";
                         tile.TileDetailData.MaxHitPoints = 100;
                         UpdateAdjacentTiles(tile);
                     }
@@ -56,7 +56,7 @@ public class BuildController : MonoBehaviour {
                 if(tile.HasTileDetail){
                     tile.HasTileDetail = false;
                     tile.TileDetailData.Type = TileDetail.TileDetailType.None;
-                    tile.TileDetailData.Description = "No detail";
+                    tile.TileDetailData.DescriptionShort = "No detail";
                     UpdateAdjacentTiles(tile);
                 }
             }

@@ -32,9 +32,12 @@ public class ContextMenuController : MonoBehaviour {
 
         if (tile.Type == Tile.TileType.Water)
         {
-            Debug.Log("Water tile");
+            //drink water button
             GameObject drinkWaterButton = Instantiate(contextMenuButtonPrefab, transform);
-            drinkWaterButton.GetComponentInChildren<TextMeshProUGUI>().text = "Drink Water";
+            string drinkWaterButtonText = drinkWaterButton.GetComponentInChildren<TextMeshProUGUI>().text = "Drink Water";
+            DrinkTileWaterButtonController drinkTileWaterButtonController = drinkWaterButton.AddComponent<DrinkTileWaterButtonController>();
+            drinkTileWaterButtonController.Initialise(this, drinkWaterButtonText);
+
             //fish button only if player has fishing rod
             GameObject fishButton = Instantiate(contextMenuButtonPrefab, transform);
             fishButton.GetComponentInChildren<TextMeshProUGUI>().text = "Fish";
@@ -67,6 +70,20 @@ public class ContextMenuController : MonoBehaviour {
             {
                 GameObject interactButton = Instantiate(contextMenuButtonPrefab, transform);
                 interactButton.GetComponentInChildren<TextMeshProUGUI>().text = "Use " + tileDetail.name;
+            }
+            if( tileDetail.isMineable){
+                // mine button only if player has correct tool?
+                GameObject mineButton = Instantiate(contextMenuButtonPrefab, transform);
+                mineButton.GetComponentInChildren<TextMeshProUGUI>().text = "Mine " + tileDetail.name;
+
+
+            }
+            if( tileDetail.isChoppable){
+                GameObject chopButton = Instantiate(contextMenuButtonPrefab, transform);
+                string chopButtonText = chopButton.GetComponentInChildren<TextMeshProUGUI>().text = "Chop " + tileDetail.name;
+                ChopButtonController chopButtonController = chopButton.AddComponent<ChopButtonController>();
+                chopButtonController.Initialise(this, chopButtonText);
+
             }
             // may need more buttons here for different types of tile details
         }
@@ -116,19 +133,9 @@ public class ContextMenuController : MonoBehaviour {
         RectTransform rt = GetComponent<RectTransform>();
         rt.sizeDelta = new Vector2(rt.sizeDelta.x, (rt.childCount * 30)+10);
     }
-    // public void ShowContextMenu(){
-    //     contextMenuInstance.SetActive(true);
-    // }
-    // public void HideContextMenu(){
-    //     contextMenuInstance.SetActive(false);
-    // }
+
     public void Update(){
-    //     if(Input.GetMouseButtonDown(1)){
-    //         ShowContextMenu();
-    //     }
-    //     if(Input.GetMouseButtonDown(0)){
-    //         HideContextMenu();
-    //     }
+ 
     }
 
     private void PlaceLineBreak(){

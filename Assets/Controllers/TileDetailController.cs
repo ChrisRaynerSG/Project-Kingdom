@@ -1,9 +1,18 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System;
+using UnityEngine.UI;
+using System.Collections.Generic;
 public class TileDetailController : MonoBehaviour{
 
     [SerializeField] Sprite tileDetailSprite;
     [SerializeField] GameObject InventoryItemPrefab;
+
+    PlayerMovementController playerMovementController;
+
+    private bool isChopping = false;
+    
+    public static event Action<float> chopTimeProgress;
     SpriteRenderer sr;
     public TileDetail TileDetailData { get; set; }
     public void Initialise(TileDetail tileDetailData){
@@ -16,6 +25,7 @@ public class TileDetailController : MonoBehaviour{
         if(!tileDetailData.IsTraversable){
             AddCollider();
         }
+        playerMovementController = GameObject.Find("Player").GetComponent<PlayerMovementController>();
     }
     private void OnDisable(){
         if(TileDetailData != null){
@@ -120,5 +130,49 @@ public class TileDetailController : MonoBehaviour{
         if(GetComponent<BoxCollider2D>() != null){
             Destroy(GetComponent<BoxCollider2D>());
         }
+    }
+
+    public void ChopTree(Tile tile, PlayerMovementController playerMovementController){
+        Tile closestTile = TileUtils.FindClosestNeighbourToPlayer(tile, playerMovementController);
+        if(closestTile != null){
+            StartCoroutine(WalkToAndChopTreeCoroutine(playerMovementController, tile, closestTile));
+        }
+    }
+
+    // public void Harvest(){
+    //     playerMovementController.MoveToTile(TileDetailData.TileData);
+    //     StartCoroutine(HarvestCoroutine());
+    // }
+
+    private IEnumerator WalkToAndChopTreeCoroutine(PlayerMovementController playerMovementController, Tile tile, Tile neighbour){
+        // move to tree first
+        if(Vector2.Distance(playerMovementController.playerTransform.position, transform.position) > 1.5f){
+            playerMovementController.MoveToTile(neighbour);
+        }
+        while(Vector2.Distance(playerMovementController.playerTransform.position, new Vector2(tile.GlobalPosX, tile.GlobalPosY)) > 1f){
+            yield return null;
+        }
+        // then chop tree
+        StartCoroutine(ChopTreeCoroutine(tile));
+    }
+
+    private IEnumerator ChopTreeCoroutine(Tile tile){
+        if(isChopping){
+            yield break;
+        }
+        // Set player movement speed to 0 to prevent player from moving while chopping
+        isChopping = true;
+        playerMovementController.playerMovementData.IsMoving = false;
+        float previousSpeed = playerMovementController.playerMovementData.MovementSpeed;
+
+        playerMovementController.playerMovementData.MovementSpeed = 0;
+        while(TileDetailData.CurrentHitPoints > 0){
+            chopTimeProgress?.Invoke(1f - (tile.TileDetailData.CurrentHitPoints/tile.TileDetailData.MaxHitPoints));
+            tile.TileDetailData.CurrentHitPoints -= 0.01f;
+            yield return null;
+        }
+        // Set player movement speed back to normal
+        isChopping = false;
+        playerMovementController.playerMovementData.MovementSpeed = previousSpeed;
     }
 }

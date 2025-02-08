@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: BerryFoodEffect
   m_EditorClassIdentifier: Assembly-CSharp::FoodEffect
-  effectName: 
+  effectName: Berry
   health: 0
-  saturation: 0
+  saturation: 2
   stamina: 0
-  hunger: 0
-  thirst: 0
+  hunger: 5
+  thirst: 2
   happiness: 0
   energy: 0
+  eatTime: 2

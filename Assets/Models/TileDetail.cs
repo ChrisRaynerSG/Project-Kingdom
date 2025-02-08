@@ -1,6 +1,6 @@
 using System;
-
-
+using System.Collections;
+using UnityEngine;
 
 
 public class TileDetail{ 
@@ -18,31 +18,43 @@ public class TileDetail{
 
     public string spriteName;
 
-    public string description;
-    public string Description { get => description;  set{
-        description = value;
+    public string descriptionShort;
+    public string descriptionLong;
+    public string DescriptionShort { get => descriptionShort;  set{
+        descriptionShort = value;
     }}
 
-    public int maxHitPoints;
-    public int MaxHitPoints { get => maxHitPoints; set{
+    public string DescriptionLong { get => descriptionLong;  set{
+        descriptionLong = value;
+    }}
+
+    public float maxHitPoints;
+    public float MaxHitPoints { get => maxHitPoints; set{
         maxHitPoints = value;
         currentHitPoints = maxHitPoints;
     }}
 
     public InventoryItem DroppedItem {get; set;}
 
-    int currentHitPoints;
+    float currentHitPoints;
 
     bool isFlammable;
     public bool isHarvestable;
 
     public bool isInteractable;
 
+    public bool isMineable;
 
-    public int CurrentHitPoints{
+    public bool isChoppable;
+
+    public TileDetailController TileDetailController {get; set;}
+
+
+    public float CurrentHitPoints{
         get => currentHitPoints;
         set{
             currentHitPoints = value;
+            OnTileDetailHitPointsChanged?.Invoke(this);
             if(currentHitPoints <= 0){
                 currentHitPoints = 0;
                 OnTileHitpointsZero?.Invoke(this);
@@ -65,13 +77,12 @@ public class TileDetail{
     
     public event Action<TileDetail> OnTileDetailPropertyChanged;
     public event Action<TileDetail> OnTileHitpointsZero;
-    //public event Action<TileDetail> OnTileDetailHitPointsChanged;
+    public event Action<TileDetail> OnTileDetailHitPointsChanged;
 
     public TileDetail(TileDetailType type, Tile tile){
         this.type = type;
         TileData = tile;
         SetTileType();
-
     }
     private void SetTileType()
     {
@@ -79,7 +90,8 @@ public class TileDetail{
         {
             case TileDetailType.Bush:
                 name = "Bush";
-                Description = "A small bush";
+                DescriptionShort = "A small bush";
+                DescriptionLong = "A dense berry bush sprawls with tangled branches, dotted with clusters of ripe, juicy berries. Its vibrant fruit offers a quick snack or a useful ingredient, while the thick foliage provides a bit of natural cover.";
                 MaxHitPoints = 10;
                 isFlammable = true;
                 isHarvestable = true;
@@ -89,35 +101,42 @@ public class TileDetail{
 
             case TileDetailType.Tree:
                 name = "Tree";
-                Description = "A large tree";
+                DescriptionShort = "A large tree";
+                DescriptionLong = "A towering oak tree stands tall, its thick, gnarled branches stretching wide to cast cool, dappled shade below. Its sturdy trunk is perfect for harvesting wood, and the rustling leaves provide a calm backdrop to the wilderness around you";
                 MaxHitPoints = 50;
                 isFlammable = true;
                 isHarvestable = true;
                 IsTraversable = false;
+                isChoppable = true;
                 DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItemDictionary.TryGetValue("Wood", out InventoryItemSO wood) ? wood : null, UnityEngine.Random.Range(2, 9), TileData);
                 break;
 
             case TileDetailType.Rock:
                 name = "Rock";
-                Description = "A large rock";
+                DescriptionShort = "A large rock";
+                DescriptionLong = "A massive, jagged rock juts from the ground, its rough surface too steep and uneven to climb. Solid and unyielding, it’s impossible to traverse but can be mined for valuable stone and minerals.";
                 MaxHitPoints = 100;
                 isFlammable = false;
                 isHarvestable = false; // set to true later when fixed
                 IsTraversable = false;
+                isMineable = true;
                 break;
 
             case TileDetailType.Wall:
                 name = "Wall";
-                Description = "A wall";
+                DescriptionShort = "A wooden wall";
+                DescriptionLong = "A sturdy wooden wall stands firm, its tightly bound planks reinforced to block any passage. Though impassable, it can be dismantled with tools, smashed apart with force, or set ablaze by a cunning arsonist looking for a quicker way through.";
                 MaxHitPoints = 100;
                 isFlammable = false;
                 isHarvestable = false;
                 IsTraversable = false;
+                isChoppable = true;
                 break;
 
             case TileDetailType.None:
                 name = "None";
-                Description = "No detail";
+                DescriptionShort = "No detail";
+                DescriptionLong = "No detail";
                 MaxHitPoints = 0;
                 isFlammable = false;
                 isHarvestable = false;

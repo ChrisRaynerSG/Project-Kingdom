@@ -2,9 +2,10 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 public class PlayerMovementController : MonoBehaviour
 {
-    PlayerMovement playerMovementData;
+    public PlayerMovement playerMovementData;
     public Transform playerTransform;
     public Rigidbody2D playerRigidbody;
 
@@ -66,9 +67,18 @@ public class PlayerMovementController : MonoBehaviour
     }
 
     public void MoveToTile(Tile tile){
-        GameObject player = GameObject.Find("Player");
-        Vector3 targetPosition = new Vector3(tile.GlobalPosX, tile.GlobalPosY, playerTransform.position.z);
-        StartCoroutine(SmoothMove(playerTransform, targetPosition));
+
+        Debug.Log($"Moving to tile {tile.GlobalPosX}, {tile.GlobalPosY}");
+
+        // Vector3 targetPosition = new Vector3(tile.GlobalPosX, tile.GlobalPosY, playerTransform.position.z);
+
+        List<Tile> path = Pathfinder.findPath(WorldController.Instance.GetTileFromGlobalPosition(new Vector2Int((int)playerTransform.position.x, (int)playerTransform.position.y)), tile);
+        // StartCoroutine(SmoothMove(playerTransform, targetPosition));
+        if (path == null || path.Count == 0){
+            Debug.LogWarning("No path found!");
+            return;
+        }
+        StartCoroutine(FollowPath(path));
     }
 
     private IEnumerator SmoothMove(Transform playerTransform, Vector3 targetPosition){
@@ -80,11 +90,21 @@ public class PlayerMovementController : MonoBehaviour
         Vector3 startingPosition = playerTransform.position;
 
         while(elapsedTime < duration){
+            Debug.Log($"Distance remaining: {distance}");
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
             playerTransform.position = Vector3.Lerp(startingPosition, targetPosition, t);
             yield return null;
         }
         playerTransform.position = targetPosition;
+    }
+    private IEnumerator FollowPath(List<Tile> path)
+    {
+        Debug.Log("Following path");
+        foreach (Tile tile in path)
+        {
+            Vector3 targetPosition = new Vector3(tile.GlobalPosX, tile.GlobalPosY, playerTransform.position.z);
+            yield return StartCoroutine(SmoothMove(playerTransform, targetPosition));
+        }
     }
 }
