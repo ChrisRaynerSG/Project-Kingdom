@@ -37,13 +37,8 @@ public class WorldController : MonoBehaviour{
     }
 
     public void Update(){
+        
         Vector2Int playerChunkPosition = GetPlayerChunkPosition();
-        // need to update this to remove chunks that are outside the view distance
-        // foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks){
-        //     if(Vector2Int.Distance(playerChunkPosition, chunk.Key) > world.ViewDistance){
-        //         activeChunks.Remove(chunk.Key);
-        //     }
-        // }
         if(playerChunkPosition != lastPlayerChunkPosition){
             if(!isGeneratingChunks)
             {
@@ -198,21 +193,7 @@ public class WorldController : MonoBehaviour{
     // to fix walls and rocks looking like chocolate mmm...
     private void UpdateConnectedTiles(Vector2Int chunkPosition, Chunk chunk)
     {
-        foreach (Tile t in chunk.Tiles)
-        {
-            if (t.HasTileDetail)
-            {
-                TileDetail td = t.TileDetailData;
-                if (td.Type == TileDetail.TileDetailType.Rock)
-                {
-                    td.Type = TileDetail.TileDetailType.Rock;
-                }
-                if(td.Type == TileDetail.TileDetailType.Wall)
-                {
-                    td.Type = TileDetail.TileDetailType.Wall;
-                }
-            }
-        }
+        RefreshTileDetails(chunk);
         //check if any adjacent chunks have rocks and update the tiles
         List<Chunk> chunks = new List<Chunk>();
         for (int i = 0; i < 8; i++)
@@ -263,19 +244,24 @@ public class WorldController : MonoBehaviour{
         }
         foreach (Chunk c in chunks)
         {
-            foreach (Tile t in c.Tiles)
-            { //could change this so only looking at the edge tiles
-                if (t.HasTileDetail)
+            RefreshTileDetails(c);
+        }
+    }
+
+    private void RefreshTileDetails(Chunk chunk)
+    {
+        foreach (Tile t in chunk.Tiles)
+        {
+            if (t.HasTileDetail)
+            {
+                TileDetail td = t.TileDetailData;
+                if (td.Type == TileDetail.TileDetailType.Rock)
                 {
-                    TileDetail td = t.TileDetailData;
-                    if (td.Type == TileDetail.TileDetailType.Rock)
-                    {
-                        td.Type = TileDetail.TileDetailType.Rock;
-                    }
-                    if (td.Type == TileDetail.TileDetailType.Wall)
-                    {
-                        td.Type = TileDetail.TileDetailType.Wall;
-                    }
+                    td.Type = TileDetail.TileDetailType.Rock;
+                }
+                if (td.Type == TileDetail.TileDetailType.Wall)
+                {
+                    td.Type = TileDetail.TileDetailType.Wall;
                 }
             }
         }

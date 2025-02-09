@@ -18,6 +18,7 @@ public class ExamineItemController : MonoBehaviour {
     public GameObject tileDetailAttributeContainer;
     private List<GameObject> tileDetailAttributes = new List<GameObject>();
     public GameObject ExamineMenu;
+    private bool hasItemChanged = false;
 
     public void ExamineTile(Tile tile)
     {
@@ -29,12 +30,14 @@ public class ExamineItemController : MonoBehaviour {
         {
             tile.TileDetailData.OnTileDetailHitPointsChanged += ShowTileDetailData;
             ShowTileDetailData(tile.TileDetailData);
+            ShowTileDetailAttributes(tile.TileDetailData);
         }
         else if (tile.HasInventoryItem)
         {
             tile.inventoryItem.OnInventoryItemChanged += ShowInventoryItemData;
             tileDetailContainer.SetActive(true);
             ShowInventoryItemData(tile.inventoryItem);
+            ShowInventoryItemAttributes(tile.inventoryItem);
         }
         else
         {
@@ -131,6 +134,31 @@ public class ExamineItemController : MonoBehaviour {
         tileDetailDescription.text = tileDetail.descriptionShort;
         tileDetailHitpoints.text = $"Hitpoints: {tileDetail.CurrentHitPoints:F0}/{tileDetail.MaxHitPoints:F0}";
 
+        if(tileDetail.CurrentHitPoints <= 0){ // if the tile has been destroyed
+            if(tileDetail.TileData.inventoryItem != null){
+                tileDetail.TileData.inventoryItem.OnInventoryItemChanged += ShowInventoryItemData;
+                ShowInventoryItemData(tileDetail.TileData.inventoryItem);
+                ShowInventoryItemAttributes(tileDetail.TileData.inventoryItem);
+            }
+            else{
+                tileDetailContainer.SetActive(false);
+            }
+        }
+    }
+
+    private void ShowInventoryItemData(InventoryItem inventoryItem)
+    {
+        tileDetailItem.text = $"{inventoryItem.Item.name}";
+        tileDetailDescription.text = inventoryItem.Item.description;
+        tileDetailHitpoints.text = $"Quantity: {inventoryItem.Quantity}";
+
+        if(inventoryItem.Quantity <= 0){ // hide the tile detail container if the item has been destroyed/used/consumed
+            tileDetailContainer.SetActive(false);
+        }
+    }
+
+    private void ShowTileDetailAttributes(TileDetail tileDetail){
+
         DestroyTileAttributes(); // Destroy any existing attributes
 
         if (tileDetail.isHarvestable){
@@ -153,26 +181,11 @@ public class ExamineItemController : MonoBehaviour {
             attribute.GetComponent<TextMeshProUGUI>().text = "Traversable";
             tileDetailAttributes.Add(attribute);
         }
-
-        if(tileDetail.CurrentHitPoints <= 0){ // if the tile has been destroyed
-            if(tileDetail.TileData.inventoryItem != null){
-                tileDetail.TileData.inventoryItem.OnInventoryItemChanged += ShowInventoryItemData;
-                ShowInventoryItemData(tileDetail.TileData.inventoryItem);
-            }
-            else{
-                tileDetailContainer.SetActive(false);
-            }
-        }
     }
 
-    private void ShowInventoryItemData(InventoryItem inventoryItem)
-    {
-        tileDetailItem.text = $"{inventoryItem.Item.name}";
-        tileDetailDescription.text = inventoryItem.Item.description;
-        tileDetailHitpoints.text = $"Quantity: {inventoryItem.Quantity}";
+    private void ShowInventoryItemAttributes(InventoryItem inventoryItem){
 
         DestroyTileAttributes(); // Destroy any existing attributes
-
         if (inventoryItem.Item.isEdible)
         {
             GameObject attribute = Instantiate(tileDetailAttributesPrefab, tileDetailAttributeContainer.transform);
@@ -202,9 +215,6 @@ public class ExamineItemController : MonoBehaviour {
             GameObject attribute = Instantiate(tileDetailAttributesPrefab, tileDetailAttributeContainer.transform);
             attribute.GetComponent<TextMeshProUGUI>().text = "Stackable";
             tileDetailAttributes.Add(attribute);
-        }
-        if(inventoryItem.Quantity <= 0){ // hide the tile detail container if the item has been destroyed/used/consumed
-            tileDetailContainer.SetActive(false);
         }
     }
 }
