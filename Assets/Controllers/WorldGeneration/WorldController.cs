@@ -17,6 +17,8 @@ public class WorldController : MonoBehaviour{
     private bool isGeneratingChunks = false;
     private Vector2Int lastPlayerChunkPosition;
 
+    private event Action OnChunksGenerated;
+
     public void Awake(){
         if(Instance == null){
             Instance = this;
@@ -26,6 +28,7 @@ public class WorldController : MonoBehaviour{
         }
         world = World.GetInstance();
         World.Seed = seed;
+        OnChunksGenerated += () => UpdateConnectedTiles(lastPlayerChunkPosition, activeChunks[lastPlayerChunkPosition]);
     }
 
     public void Start(){
@@ -72,7 +75,11 @@ public class WorldController : MonoBehaviour{
         }
     }
     private Vector2Int GetPlayerChunkPosition(){
-        return new Vector2Int(Mathf.FloorToInt(playerTransform.position.x / World.chunkSize), Mathf.FloorToInt(playerTransform.position.y / World.chunkSize));
+
+        int x = Mathf.FloorToInt(playerTransform.position.x / (float)World.chunkSize);
+        int y = Mathf.FloorToInt(playerTransform.position.y / (float)World.chunkSize);
+        return new Vector2Int(x, y);
+        //return new Vector2Int(Mathf.FloorToInt(playerTransform.position.x / World.chunkSize), Mathf.FloorToInt(playerTransform.position.y / World.chunkSize));
     }
 
     public Tile GetTileFromMousePosition(Vector3 mousePosition){
@@ -92,51 +99,56 @@ public class WorldController : MonoBehaviour{
 
     }
 
-    public Tile GetTileFromGlobalPosition(Vector2Int globalPosition){
-        Vector2Int chunkPosition = new Vector2Int(globalPosition.x / World.chunkSize, globalPosition.y / World.chunkSize);
-        Vector2Int tilePosition = new Vector2Int(globalPosition.x % World.chunkSize, globalPosition.y % World.chunkSize);
+    public Tile GetTileFromGlobalPosition(Vector2Int globalPosition)
+    {
+    
+        Vector2Int chunkPosition = new Vector2Int(
+            Mathf.FloorToInt((float)globalPosition.x / World.chunkSize),
+            Mathf.FloorToInt((float)globalPosition.y / World.chunkSize)
+        );
 
-        Chunk chunk;
+       
+        Vector2Int tilePosition = new Vector2Int(
+            globalPosition.x % World.chunkSize,
+            globalPosition.y % World.chunkSize
+        );
 
-        if(activeChunks.TryGetValue(chunkPosition, out chunk) == false){
+        
+        if (tilePosition.x < 0)
+        {
+            tilePosition.x += World.chunkSize;
+        }
+        if (tilePosition.y < 0)
+        {
+            tilePosition.y += World.chunkSize;
+        }
+
+        
+        if (!activeChunks.TryGetValue(chunkPosition, out Chunk chunk))
+        {
             return null;
         }
 
-        // fix negative tile and chunk positions
-        if(tilePosition.x < 0){
-            tilePosition.x = World.chunkSize + tilePosition.x;
-            chunkPosition.x -= 1;
-        }
-        if(tilePosition.y < 0){
-            tilePosition.y = World.chunkSize + tilePosition.y;
-            chunkPosition.y -= 1;
-        }
-
-        chunk = world.GetChunkFromCoordinates(chunkPosition);
-        if(chunk == null){
+        
+        if (chunk.Tiles[tilePosition.x, tilePosition.y] == null)
+        {
             return null;
         }
-        else if(chunk.Tiles[tilePosition.x, tilePosition.y] == null){
-            return null;
-        }
-        else{
+        else
+        {
             return chunk.Tiles[tilePosition.x, tilePosition.y];
         }
     }
 
     public Chunk GetChunkFromGlobalPosition(Vector2Int globalPosition){
-        Vector2Int chunkPosition = new Vector2Int(globalPosition.x / World.chunkSize, globalPosition.y / World.chunkSize);
+        int x = Mathf.FloorToInt(globalPosition.x / (float)World.chunkSize);
+        int y = Mathf.FloorToInt(globalPosition.y / (float)World.chunkSize);
+        Vector2Int chunkPosition = new Vector2Int(x, y);
         Chunk chunk;
-        if(globalPosition.x < 0){
-            chunkPosition.x -= 1;
+        if(activeChunks.TryGetValue(chunkPosition, out chunk)){
+            return chunk;
         }
-        if(globalPosition.y < 0){
-            chunkPosition.y -= 1;
-        }
-        if(activeChunks.TryGetValue(chunkPosition, out chunk) == false){
-            return null;
-        }
-        return chunk;
+        return null;
     }
 
     private void unloadChunk(Vector2Int chunkPosition){
@@ -167,7 +179,6 @@ public class WorldController : MonoBehaviour{
             newCachedChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
             newCachedChunk.GetComponent<ChunkController>().Initialise(cachedChunk);
             chunkGameObjects.Add(chunkPosition, newCachedChunk);
-            UpdateConnectedTiles(chunkPosition, cachedChunk);
         }
         else
         {
@@ -179,7 +190,6 @@ public class WorldController : MonoBehaviour{
             newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
             newChunk.GetComponent<ChunkController>().Initialise(chunk);
             chunkGameObjects.Add(chunkPosition, newChunk);
-            UpdateConnectedTiles(chunkPosition, chunk);
         }
         //need to go over tileDetail again to update adjacent rocks/walls etc may cause issues with tiles in adjacent chunks this could also be a massive performance hit? Tested it, it is...
         // what would be a better way to do this?
@@ -288,5 +298,6 @@ public class WorldController : MonoBehaviour{
             }
         }
         isGeneratingChunks = false;
+        OnChunksGenerated?.Invoke();
     }
 }
