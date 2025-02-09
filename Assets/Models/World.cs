@@ -6,7 +6,7 @@ public class World{
     public const int chunkSize = 16;
     public static int Seed {get; set;} = 0;
 
-    public int ViewDistance {get; set;} = 2;
+    public int ViewDistance {get; set;} = 1;
     
     public static World Instance { get; private set; }
 
