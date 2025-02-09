@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryItem{
     public InventoryItemSO Item {get; private set;}
-    public static event Action<InventoryItem> OnInventoryItemChanged;
+    public event Action<InventoryItem> OnInventoryItemChanged;
     public int Quantity {get; private set;}
     public float TotalMass => Quantity * Item.massPerUnit;
     public float TotalValue => Quantity * Item.value;
