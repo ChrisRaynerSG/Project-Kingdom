@@ -13,8 +13,9 @@ public class WorldController : MonoBehaviour{
 
     Dictionary<Vector2Int, Chunk> activeChunks = new Dictionary<Vector2Int, Chunk>();
     Dictionary<Vector2Int, GameObject> chunkGameObjects = new Dictionary<Vector2Int, GameObject>();
-
     private World world;
+    private bool isGeneratingChunks = false;
+    private Vector2Int lastPlayerChunkPosition;
 
     public void Awake(){
         if(Instance == null){
@@ -40,26 +41,26 @@ public class WorldController : MonoBehaviour{
         //         activeChunks.Remove(chunk.Key);
         //     }
         // }
-        for(int x = playerChunkPosition.x - world.ViewDistance; x <= playerChunkPosition.x + world.ViewDistance; x++){
-            for(int y = playerChunkPosition.y - world.ViewDistance; y <= playerChunkPosition.y + world.ViewDistance; y++){
-                Vector2Int chunkPosition = new Vector2Int(x, y);
-                if(activeChunks.ContainsKey(chunkPosition)){
-                    continue;
-                }
-                else{
-                    GenerateChunk(chunkPosition, x, y);
+        if(playerChunkPosition != lastPlayerChunkPosition){
+            if(!isGeneratingChunks)
+            {
+                StartCoroutine(GenerateChunkCoroutine(playerChunkPosition));
+            }
+
+            List<Vector2Int> chunksToUnload = new List<Vector2Int>();
+            foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks)
+            {
+                if (Mathf.Abs(playerChunkPosition.x - chunk.Key.x) > world.ViewDistance || 
+                Mathf.Abs(playerChunkPosition.y - chunk.Key.y) > world.ViewDistance) 
+                {
+                    chunksToUnload.Add(chunk.Key);
                 }
             }
-        }
-        List<Vector2Int> chunksToUnload = new List<Vector2Int>();
-        foreach(KeyValuePair<Vector2Int, Chunk> chunk in activeChunks){
-            if (Mathf.Abs(playerChunkPosition.x - chunk.Key.x) > world.ViewDistance || 
-            Mathf.Abs(playerChunkPosition.y - chunk.Key.y) > world.ViewDistance) {
-            chunksToUnload.Add(chunk.Key);
+            foreach(Vector2Int chunk in chunksToUnload)
+            {
+                unloadChunk(chunk);
             }
-        }
-        foreach(Vector2Int chunk in chunksToUnload){
-            unloadChunk(chunk);
+            lastPlayerChunkPosition = playerChunkPosition;
         }
     }
     private void GenerateWorld(){
@@ -268,5 +269,24 @@ public class WorldController : MonoBehaviour{
                 }
             }
         }
+    }
+
+    private IEnumerator GenerateChunkCoroutine(Vector2Int playerChunkPosition){
+
+        isGeneratingChunks = true;
+
+        for(int x = playerChunkPosition.x - world.ViewDistance; x <= playerChunkPosition.x + world.ViewDistance; x++){
+            for(int y = playerChunkPosition.y - world.ViewDistance; y <= playerChunkPosition.y + world.ViewDistance; y++){
+                Vector2Int chunkPosition = new Vector2Int(x, y);
+                if(activeChunks.ContainsKey(chunkPosition)){
+                    continue;
+                }
+                else{
+                    GenerateChunk(chunkPosition, x, y);
+                    yield return null;
+                }
+            }
+        }
+        isGeneratingChunks = false;
     }
 }
