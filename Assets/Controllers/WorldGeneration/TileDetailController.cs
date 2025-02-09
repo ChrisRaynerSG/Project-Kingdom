@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 public class TileDetailController : MonoBehaviour{
 
     [SerializeField] Sprite tileDetailSprite;
@@ -27,6 +28,32 @@ public class TileDetailController : MonoBehaviour{
         }
         playerMovementController = GameObject.Find("Player").GetComponent<PlayerMovementController>();
     }
+
+    public void ResetData(){
+
+
+        if(TileDetailData != null){
+            TileDetailData.OnTileDetailPropertyChanged -= TileDetailTypeChanged;
+            TileDetailData.OnTileHitpointsZero -= TileDetailDestroyed;
+        }
+
+        // TileDetailData = null;
+
+        if(sr != null){
+            sr.sprite = null;
+            sr.material.color = Color.white;
+        }
+
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        if(collider != null){
+            Destroy(collider);
+        }
+
+        transform.localPosition = Vector3.zero;
+        transform.localScale = Vector3.one;
+
+    }
+
     private void OnDisable(){
         if(TileDetailData != null){
             TileDetailData.OnTileDetailPropertyChanged -= TileDetailTypeChanged;

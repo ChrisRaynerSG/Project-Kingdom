@@ -11,14 +11,25 @@ public class TileController : MonoBehaviour {
     TileData = tileData;
     if(TileData.HasTileDetail){
         // Set up tile detail controller
-        GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
-        newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
-        TileData.TileDetailData.TileDetailController = newTileDetail.GetComponent<TileDetailController>();
+        // GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
+        // newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
+        
+
+        GameObject newTileDetail = TileDetailObjectPool.Instance.GetObject(new Vector3(tileData.GlobalPosX, tileData.GlobalPosY, 0), transform);
+        
+
+        if(newTileDetail != null){
+            newTileDetail.GetComponent<TileDetailController>().ResetData(); // Clear any previous data
+            newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData); // Set up new data
+            newTileDetail.name = $"{tileData.TileDetailData.Type} tile detail, {tileData.GlobalPosX} {tileData.GlobalPosY}";
+            TileData.TileDetailData.TileDetailController = newTileDetail.GetComponent<TileDetailController>();
+        }
     }
     else{ // set up a blank detail game object
         TileDetail tileDetail = new TileDetail(TileDetail.TileDetailType.None, TileData);
         TileData.TileDetailData = tileDetail;
-        GameObject newTileDetail = Instantiate(tileDetailController, new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), Quaternion.identity, transform);
+        GameObject newTileDetail = TileDetailObjectPool.Instance.GetObject(new Vector3(tileData.GlobalPosX,tileData.GlobalPosY,0), transform);
+        newTileDetail.GetComponent<TileDetailController>().ResetData();
         newTileDetail.GetComponent<TileDetailController>().Initialise(tileData.TileDetailData);
         TileData.TileDetailData.TileDetailController = newTileDetail.GetComponent<TileDetailController>();
     
@@ -57,6 +68,14 @@ public class TileController : MonoBehaviour {
             break;
         }
     }
+    public void ResetTile(){
+        TileDetailObjectPool.Instance.ReturnObject(TileData.TileDetailData.TileDetailController.gameObject);
+        // TileData.OnTileTypeChanged -= TileTypeChanged;
+        // TileData.TileDetailData = null;
+        // TileData.inventoryItem = null;
+        //TileData = null;
+    }
 }
+
 
 

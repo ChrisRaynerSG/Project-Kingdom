@@ -142,7 +142,9 @@ public class WorldController : MonoBehaviour{
         if(activeChunks.TryGetValue(chunkPosition, out Chunk chunk)){
             activeChunks.Remove(chunkPosition);
             if (chunkGameObjects.TryGetValue(chunkPosition, out GameObject chunkObj)){
-                Destroy(chunkObj);
+                chunkObj.GetComponent<ChunkController>().UnloadChunk();
+                ChunkObjectPool.Instance.ReturnObject(chunkObj);
+                //Destroy(chunkObj);
                 chunkGameObjects.Remove(chunkPosition);
             }
         }
@@ -160,7 +162,7 @@ public class WorldController : MonoBehaviour{
         else if(world.cachedChunks.TryGetValue(chunkPosition, out Chunk cachedChunk)){
             //Debug.Log("Generating chunk from cache");
             activeChunks.Add(chunkPosition, cachedChunk);
-            GameObject newCachedChunk = Instantiate(chunkPrefab, new Vector3(x,y,0), Quaternion.identity, transform);
+            GameObject newCachedChunk = ChunkObjectPool.Instance.GetObject(new Vector3(x, y, 0), transform);
             newCachedChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
             newCachedChunk.GetComponent<ChunkController>().Initialise(cachedChunk);
             chunkGameObjects.Add(chunkPosition, newCachedChunk);
@@ -172,7 +174,7 @@ public class WorldController : MonoBehaviour{
             Chunk chunk = new Chunk(chunkPosition);
             world.cachedChunks.Add(chunkPosition, chunk);
             activeChunks.Add(chunkPosition, chunk);
-            GameObject newChunk = Instantiate(chunkPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
+            GameObject newChunk = ChunkObjectPool.Instance.GetObject(new Vector3(x, y, 0), transform);
             newChunk.name = $"Chunk {chunkPosition.x} {chunkPosition.y}";
             newChunk.GetComponent<ChunkController>().Initialise(chunk);
             chunkGameObjects.Add(chunkPosition, newChunk);
