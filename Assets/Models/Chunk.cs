@@ -48,6 +48,30 @@ public class Chunk{
     private void GenerateChunkDetails(){
         for(int x = 0; x < World.chunkSize; x++){
             for(int y = 0; y < World.chunkSize; y++){
+                if(DetailMap[x,y]<0.15f){
+                    if(Tiles[x, y].Type == Tile.TileType.Grass){
+                        Tiles[x, y].HasTileDetail = true;
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.Rock, Tiles[x, y]);
+                    }
+                }
+                if(DetailMap[x, y] > 0.5f){
+                    if(Tiles[x, y].Type == Tile.TileType.Grass){
+                        Tiles[x, y].HasTileDetail = true;
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.LongGrass, Tiles[x, y]);
+                    }
+                }
+                if(DetailMap[x, y] > 0.6f){
+                    if(Tiles[x, y].Type == Tile.TileType.Grass){
+                        Tiles[x, y].HasTileDetail = true;
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.LongGrassDaisies, Tiles[x, y]);
+                    }
+                }
+                if(DetailMap[x, y] > 0.63f){
+                    if(Tiles[x, y].Type == Tile.TileType.Grass){
+                        Tiles[x, y].HasTileDetail = true;
+                        Tiles[x, y].TileDetailData = new TileDetail(TileDetail.TileDetailType.LongGrass, Tiles[x, y]);
+                    }
+                }
                 if(DetailMap[x, y] > 0.7f){
                     if(Tiles[x, y].Type == Tile.TileType.Grass){
                         Tiles[x, y].HasTileDetail = true;

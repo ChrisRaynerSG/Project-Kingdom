@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,11 +15,14 @@ public class SpriteLoader{
     public Sprite[] BasicDetailSprites {get; private set;}
     public Sprite[] WallTilesAdvanced {get; private set;}
     public Sprite[] InventoryItemSprites {get; private set;}
+    public Sprite[] KoMbasicTrees {get; private set;}
 
     public InventoryItemSO[] InventoryItems {get; private set;}
 
     public Dictionary<string, InventoryItemSO> InventoryItemDictionary = new Dictionary<string, InventoryItemSO>();
     public Dictionary<string, Sprite> WallTileDictionary = new Dictionary<string, Sprite>();
+
+    public Dictionary<string, Sprite> TileDetailDictionary = new Dictionary<string, Sprite>();
 
 
     public static SpriteLoader GetInstance{
@@ -34,6 +38,8 @@ public class SpriteLoader{
         BasicDetailSprites = Resources.LoadAll<Sprite>("Sprites/VeryBasicTiles");
         WallTilesAdvanced = Resources.LoadAll<Sprite>("Sprites/Walls/WallTilesAdvanced");
         InventoryItems = Resources.LoadAll<InventoryItemSO>("ScriptableObjects/InventoryItems");
+        KoMbasicTrees = Resources.LoadAll<Sprite>("Sprites/KoMTreeSet1");
+
         // InventoryItemSprites = Resources.LoadAll<Sprite>("Sprites/InventoryItems");  
 
         foreach(Sprite sprite in WallTilesAdvanced){
@@ -43,5 +49,10 @@ public class SpriteLoader{
         foreach(InventoryItemSO item in InventoryItems){
             InventoryItemDictionary.Add(item.name, item);
         }
+        foreach(Sprite sprite in KoMbasicTrees){
+            TileDetailDictionary.Add(sprite.name, sprite);
+        }
+        TileDetailDictionary.Add("LongGrass", Resources.Load<Sprite>("Sprites/LongGrass"));
+        TileDetailDictionary.Add("LongGrassDaisies", Resources.Load<Sprite>("Sprites/LongGrassDaisies"));
     }
 }

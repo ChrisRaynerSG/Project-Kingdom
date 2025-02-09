@@ -11,7 +11,9 @@ public class TileDetail{
         Bush,
         Tree,
         Rock,
-        Wall
+        Wall,
+        LongGrass,
+        LongGrassDaisies
     }
 
     public string name;
@@ -142,6 +144,26 @@ public class TileDetail{
                 isHarvestable = false;
                 IsTraversable = true;
                 TileData.HasTileDetail = false;
+                break;
+            
+            case TileDetailType.LongGrass:
+                name = "Long Grass";
+                DescriptionShort = "Long grassy grass... grass.";
+                DescriptionLong = "Grass so Long it's like a jungle, but not really, because it's just grass and not a jungle. It's just grass. Long grass.";
+                MaxHitPoints = 5;
+                isFlammable = true;
+                isHarvestable = false;
+                IsTraversable = true;
+                break;
+
+            case TileDetailType.LongGrassDaisies:
+                name = "Daisy Patch";
+                DescriptionShort = "A patch of daisies";
+                DescriptionLong = "A patch of daisies, the flowers are white with yellow centers. The daisies are surrounded by long grass.";
+                MaxHitPoints = 5;
+                isFlammable = true;
+                isHarvestable = false;
+                IsTraversable = true;
                 break;
 
             default:
