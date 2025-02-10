@@ -41,7 +41,8 @@ public class TileController : MonoBehaviour {
             GetComponent<SpriteRenderer>().material.color = Color.blue;
             break;
         case Tile.TileType.Grass:
-            GetComponent<SpriteRenderer>().material.color = new Color(0.1f, 0.4f, 0.1f);
+            GetComponent<SpriteRenderer>().material.color = Color.white;
+            GetComponent<SpriteRenderer>().sprite = SpriteLoader.GetInstance.FloorTileDictionary.TryGetValue("NewGrassTile_0", out Sprite grassTile) ? grassTile : null;
             break;
         case Tile.TileType.Dirt:
             GetComponent<SpriteRenderer>().material.color = new Color(0.6f, 0.3f, 0.1f);
@@ -58,7 +59,8 @@ public class TileController : MonoBehaviour {
             GetComponent<SpriteRenderer>().material.color = Color.blue;
             break;
         case Tile.TileType.Grass:
-            GetComponent<SpriteRenderer>().material.color = Color.green;
+            GetComponent<SpriteRenderer>().material.color = Color.white;
+            GetComponent<SpriteRenderer>().sprite = SpriteLoader.GetInstance.FloorTileDictionary.TryGetValue("NewGrassTile_0", out Sprite grassTile) ? grassTile : null;
             break;
         case Tile.TileType.Dirt:
             GetComponent<SpriteRenderer>().material.color = Color.yellow;

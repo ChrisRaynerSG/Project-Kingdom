@@ -13,7 +13,9 @@ public class TileDetail{
         Rock,
         Wall,
         LongGrass,
-        LongGrassDaisies
+        LongGrassDaisies,
+
+        BigTree
     }
 
     public string name;
@@ -164,6 +166,18 @@ public class TileDetail{
                 isFlammable = true;
                 isHarvestable = false;
                 IsTraversable = true;
+                break;
+
+            case TileDetailType.BigTree:
+                name = "Big Tree";
+                DescriptionShort = "A big tree";
+                DescriptionLong = "A big tree, it stands tall and proud, its thick, gnarled branches stretching wide to cast cool, dappled shade below. Its sturdy trunk is perfect for harvesting wood, and the rustling leaves provide a calm backdrop to the wilderness around you";
+                MaxHitPoints = 100;
+                isFlammable = true;
+                isHarvestable = true;
+                IsTraversable = false;
+                isChoppable = true;
+                DroppedItem = new InventoryItem(SpriteLoader.GetInstance.InventoryItemDictionary.TryGetValue("Wood", out InventoryItemSO wood2) ? wood2 : null, UnityEngine.Random.Range(4, 14), TileData);
                 break;
 
             default:

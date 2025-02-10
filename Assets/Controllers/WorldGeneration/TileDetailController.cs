@@ -84,7 +84,7 @@ public class TileDetailController : MonoBehaviour{
                 break;
             case TileDetail.TileDetailType.Tree:
                 //sr.material.color = Color.green;
-                sr.sprite = SpriteLoader.GetInstance.TileDetailDictionary.TryGetValue("BigTree_0", out Sprite treeSprite) ? treeSprite : null;
+                sr.sprite = SpriteLoader.GetInstance.TileDetailDictionary.TryGetValue("BigTrees1_1", out Sprite treeSprite) ? treeSprite : null;
                 break;
             case TileDetail.TileDetailType.Rock:
                 sr.material.color = new Color(0.6f, 0.3f, 0.1f);
@@ -102,6 +102,9 @@ public class TileDetailController : MonoBehaviour{
                 break;
             case TileDetail.TileDetailType.LongGrassDaisies:
                 sr.sprite = SpriteLoader.GetInstance.TileDetailDictionary.TryGetValue("LongGrassDaisies", out Sprite longGrassDaisiesSprite) ? longGrassDaisiesSprite : null;
+                break;
+            case TileDetail.TileDetailType.BigTree:
+                sr.sprite = SpriteLoader.GetInstance.TileDetailDictionary.TryGetValue("BigTrees1_0", out Sprite bigTreeSprite) ? bigTreeSprite : null;
                 break;
         }
     }
