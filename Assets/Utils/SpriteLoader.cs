@@ -17,6 +17,8 @@ public class SpriteLoader{
     public Sprite[] InventoryItemSprites {get; private set;}
     public Sprite[] KoMbasicTrees {get; private set;}
 
+    public Sprite[] KoMBigTrees {get; private set;}
+
     public InventoryItemSO[] InventoryItems {get; private set;}
 
     public Dictionary<string, InventoryItemSO> InventoryItemDictionary = new Dictionary<string, InventoryItemSO>();
@@ -39,6 +41,7 @@ public class SpriteLoader{
         WallTilesAdvanced = Resources.LoadAll<Sprite>("Sprites/Walls/WallTilesAdvanced");
         InventoryItems = Resources.LoadAll<InventoryItemSO>("ScriptableObjects/InventoryItems");
         KoMbasicTrees = Resources.LoadAll<Sprite>("Sprites/KoMTreeSet1");
+        KoMBigTrees = Resources.LoadAll<Sprite>("Sprites/BigTree");
 
         // InventoryItemSprites = Resources.LoadAll<Sprite>("Sprites/InventoryItems");  
 
@@ -52,7 +55,11 @@ public class SpriteLoader{
         foreach(Sprite sprite in KoMbasicTrees){
             TileDetailDictionary.Add(sprite.name, sprite);
         }
+        foreach(Sprite sprite in KoMBigTrees){
+            TileDetailDictionary.Add(sprite.name, sprite);
+        }
         TileDetailDictionary.Add("LongGrass", Resources.Load<Sprite>("Sprites/LongGrass"));
         TileDetailDictionary.Add("LongGrassDaisies", Resources.Load<Sprite>("Sprites/LongGrassDaisies"));
+        
     }
 }
